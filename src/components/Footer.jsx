@@ -5,7 +5,7 @@ export default function Footer({ onPrivacyClick }) {
         <div className="footer-top">
           <div className="footer-brand">
             <a href="#top" className="footer-logo">
-              <img src="/logo.png" alt="Capital Gateway" className="footer-logo-img" />
+              <img src="/white-01.png" alt="Capital Gateway" className="footer-logo-img" />
             </a>
             <p>
               FCA authorised credit broker connecting UK businesses and property owners
@@ -88,9 +88,8 @@ export default function Footer({ onPrivacyClick }) {
           display: inline-flex;
           align-items: center;
           margin-bottom: 20px;
-          background: var(--paper);
-          border-radius: 10px;
-          padding: 8px 14px;
+          transform: scale(3.5);
+          margin-left: 30px;
         }
         .footer-logo-img {
           height: 64px;
