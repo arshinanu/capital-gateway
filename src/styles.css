@@ -1,0 +1,169 @@
+:root {
+  /* Palette: warm ivory base, deep ink, muted forest, electric lime accent */
+  --ivory: #f4f1ea;
+  --ivory-2: #ebe6db;
+  --paper: #fbfaf6;
+  --ink: #0f1412;
+  --ink-2: #1c2420;
+  --muted: #5e6660;
+  --line: #d9d3c4;
+  --forest: #1f3a32;
+  --forest-2: #2a4f44;
+  --accent: #c6ff4a; /* electric lime */
+  --accent-2: #9de000;
+
+  /* Typography */
+  --font-display: 'Jockey One', system-ui, sans-serif;
+  --font-body: 'Jockey One', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Easing */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 20% 0%, rgba(31, 58, 50, 0.04), transparent 50%),
+    radial-gradient(circle at 80% 100%, rgba(198, 255, 74, 0.06), transparent 50%);
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+input, textarea, select { font-family: inherit; font-size: inherit; color: inherit; }
+
+::selection { background: var(--accent); color: var(--ink); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--ivory); }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* Layout primitives */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--ink);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  font-variation-settings: "opsz" 144;
+}
+
+.italic-accent {
+  font-style: italic;
+  font-variation-settings: "opsz" 144;
+  color: var(--forest);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s var(--ease);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn-primary:hover {
+  background: var(--forest);
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.btn-accent:hover {
+  background: var(--accent-2);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px -10px rgba(198, 255, 74, 0.6);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.btn-ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+/* Section padding */
+section {
+  padding: 120px 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  section { padding: 80px 0; }
+  .container { padding: 0 20px; }
+}
+
+/* Reveal animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  animation: fadeUp 0.9s var(--ease) both;
+}
+
+/* Noise overlay utility */
+.noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
