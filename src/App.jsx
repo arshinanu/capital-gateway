@@ -7,6 +7,7 @@ import About from './components/About.jsx'
 import Calculator from './components/Calculator.jsx'
 import Testimonials from './components/Testimonials.jsx'
 import TrustpilotBanner from './components/TrustpilotBanner.jsx'
+import LatestNews from './components/LatestNews.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import PrivacyPolicy from './components/PrivacyPolicy.jsx'
@@ -25,6 +26,7 @@ export default function App() {
         <Calculator />
         <Testimonials />
         <TrustpilotBanner />
+        <LatestNews />
         <Contact />
       </main>
       <Footer onPrivacyClick={() => setShowPrivacy(true)} />

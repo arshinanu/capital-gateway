@@ -15,6 +15,7 @@ export default function Nav() {
     { href: '#about', label: 'About' },
     { href: '#calculator', label: 'Calculator' },
     { href: '#testimonials', label: 'Clients' },
+    { href: '#news', label: 'News' },
     { href: '#contact', label: 'Contact' },
   ]
 
