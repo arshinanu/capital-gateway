@@ -12,7 +12,7 @@ export default function Hero() {
 
         <h1 className="display hero-title reveal">
           Unlock finance<br/>
-          <span className="italic-accent">solutions</span> for your business.
+          <span className="italic-accent" style={{ marginRight: '20px' }}>solutions</span> for your business.
         </h1>
 
         <div className="hero-bottom">

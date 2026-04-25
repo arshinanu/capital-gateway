@@ -1,14 +1,47 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useRef } from 'react'
+
+const DEFAULTS = { property: 5.25, business: 6.85 }
+
+function loadRates() {
+  try { return { ...DEFAULTS, ...JSON.parse(localStorage.getItem('calc-rates') || '{}') } }
+  catch { return { ...DEFAULTS } }
+}
 
 export default function Calculator() {
   const [loanType, setLoanType] = useState('property')
   const [amount, setAmount] = useState(500000)
   const [term, setTerm] = useState(15)
   const [income, setIncome] = useState(120000)
+  const [rates, setRates] = useState(loadRates)
+  const [editingRate, setEditingRate] = useState(false)
+  const [rateInput, setRateInput] = useState('')
+  const rateRef = useRef(null)
+
+  const currentRate = rates[loanType]
+
+  const startEdit = () => {
+    setRateInput(String(currentRate))
+    setEditingRate(true)
+    setTimeout(() => rateRef.current?.select(), 0)
+  }
+
+  const commitRate = () => {
+    const parsed = parseFloat(rateInput)
+    if (!isNaN(parsed) && parsed > 0 && parsed < 100) {
+      const updated = { ...rates, [loanType]: parsed }
+      setRates(updated)
+      localStorage.setItem('calc-rates', JSON.stringify(updated))
+    }
+    setEditingRate(false)
+  }
+
+  const onRateKey = (e) => {
+    if (e.key === 'Enter') commitRate()
+    if (e.key === 'Escape') setEditingRate(false)
+  }
 
   const result = useMemo(() => {
-    // Simplified illustrative calculation
-    const baseRate = loanType === 'property' ? 0.0525 : 0.0685
+    const baseRate = currentRate / 100
     const monthly = baseRate / 12
     const n = term * 12
     const payment = (amount * monthly) / (1 - Math.pow(1 + monthly, -n))
@@ -18,11 +51,11 @@ export default function Calculator() {
     return {
       monthly: Math.round(payment),
       totalInterest: Math.round(totalInterest),
-      rate: (baseRate * 100).toFixed(2),
+      rate: currentRate.toFixed(2),
       dti: dti.toFixed(1),
       eligible,
     }
-  }, [amount, term, income, loanType])
+  }, [amount, term, income, loanType, currentRate])
 
   const fmt = (n) => '£' + n.toLocaleString('en-GB')
 
@@ -70,9 +103,9 @@ export default function Calculator() {
             <Field
               label="Term"
               value={`${term} years`}
-              min={1} max={30} step={1}
+              min={1} max={40} step={1}
               val={term} onChange={setTerm}
-              hint="1 – 30 years"
+              hint="1 – 40 years"
             />
 
             <Field
@@ -103,7 +136,32 @@ export default function Calculator() {
             <div className="result-grid">
               <div>
                 <span>Indicative rate</span>
-                <strong>{result.rate}%</strong>
+                {editingRate ? (
+                  <div className="rate-edit">
+                    <input
+                      ref={rateRef}
+                      type="number"
+                      min="0.1"
+                      max="99"
+                      step="0.05"
+                      value={rateInput}
+                      onChange={e => setRateInput(e.target.value)}
+                      onBlur={commitRate}
+                      onKeyDown={onRateKey}
+                      className="rate-input"
+                      autoFocus
+                    />
+                    <span className="rate-pct">%</span>
+                  </div>
+                ) : (
+                  <button className="rate-display" onClick={startEdit} title="Click to edit rate">
+                    <strong>{result.rate}%</strong>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                    </svg>
+                  </button>
+                )}
               </div>
               <div>
                 <span>Total interest</span>
@@ -285,6 +343,56 @@ export default function Calculator() {
           font-family: var(--font-display);
           font-size: 22px;
           font-weight: 500;
+        }
+
+        .rate-display {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          background: none;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          color: inherit;
+        }
+        .rate-display strong {
+          font-family: var(--font-display);
+          font-size: 22px;
+          font-weight: 500;
+        }
+        .rate-display svg {
+          opacity: 0.4;
+          transition: opacity 0.2s;
+          flex-shrink: 0;
+        }
+        .rate-display:hover svg { opacity: 1; }
+        .rate-edit {
+          display: flex;
+          align-items: center;
+          gap: 2px;
+        }
+        .rate-input {
+          width: 72px;
+          background: rgba(251,250,246,0.12);
+          border: 1px solid rgba(251,250,246,0.35);
+          border-radius: 6px;
+          color: var(--paper);
+          font-family: var(--font-display);
+          font-size: 22px;
+          font-weight: 500;
+          padding: 2px 8px;
+          outline: none;
+        }
+        .rate-input:focus {
+          border-color: var(--accent);
+        }
+        .rate-input::-webkit-inner-spin-button,
+        .rate-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+        .rate-pct {
+          font-family: var(--font-display);
+          font-size: 22px;
+          font-weight: 500;
+          margin-left: 2px;
         }
 
         .result-cta {

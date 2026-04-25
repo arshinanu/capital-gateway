@@ -1,55 +1,15 @@
-const articles = [
-  {
-    tag: 'Business Finance',
-    date: 'Apr 2025',
-    title: 'Bank of England Holds Base Rate at 4.5% — What It Means for Business Borrowers',
-    excerpt:
-      'The MPC voted to hold rates steady in April, giving SMEs more certainty on debt-servicing costs. Lenders are now competing harder on fixed-rate working capital and asset finance products.',
-    href: 'https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes',
-  },
-  {
-    tag: 'Property Finance',
-    date: 'Apr 2025',
-    title: 'Commercial Property Investment Rebounds as Yields Stabilise Across UK Regions',
-    excerpt:
-      'Transaction volumes in Q1 2025 rose 18% year-on-year as investors returned to regional office and industrial stock. Commercial mortgage appetite among specialist lenders is growing.',
-    href: 'https://www.savills.co.uk/research_articles/229130/375464-0',
-  },
-  {
-    tag: 'Business Finance',
-    date: 'Mar 2025',
-    title: 'SME Lending Rises for Third Consecutive Quarter as Confidence Returns',
-    excerpt:
-      'British Business Bank data shows net lending to SMEs increased for the third straight quarter. Invoice finance and revolving credit facilities drove the majority of new drawdowns.',
-    href: 'https://www.british-business-bank.co.uk/research/',
-  },
-  {
-    tag: 'Property Finance',
-    date: 'Mar 2025',
-    title: 'Bridging Finance Volumes Hit Record High as Property Chains Speed Up',
-    excerpt:
-      'The short-term lending market completed over £850m in Q1 2025 — a record quarter. Regulated bridging is increasingly used as a strategic tool, not just a last resort.',
-    href: 'https://www.astl.org.uk/',
-  },
-  {
-    tag: 'Property Finance',
-    date: 'Feb 2025',
-    title: 'Planning Reform Boosts Residential Development Pipeline Across England',
-    excerpt:
-      "Government planning changes are translating into more starts, and development finance lenders are responding with more competitive LTVs on schemes with strong pre-sales.",
-    href: 'https://www.gov.uk/government/collections/planning-practice-guidance',
-  },
-  {
-    tag: 'Business Finance',
-    date: 'Feb 2025',
-    title: 'Asset Finance Market Grows 9% as Firms Invest in Equipment and Green Tech',
-    excerpt:
-      'The Finance & Leasing Association reports a 9% rise in asset finance new business. Electric vehicles, solar installations, and manufacturing equipment dominate new agreements.',
-    href: 'https://www.fla.org.uk/data-and-research/',
-  },
-]
+import { useState, useEffect } from 'react'
 
 export default function LatestNews() {
+  const [articles, setArticles] = useState([])
+
+  useEffect(() => {
+    fetch('/news.json')
+      .then(r => r.json())
+      .then(setArticles)
+      .catch(() => {})
+  }, [])
+
   return (
     <section id="news" className="news">
       <div className="container">

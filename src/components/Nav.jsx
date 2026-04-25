@@ -86,14 +86,14 @@ export default function Nav() {
           align-items: center;
         }
         .logo-img {
-          height: 68px;
+          height: 166px;
           width: auto;
           display: block;
         }
         .nav-links {
           display: flex;
           gap: 36px;
-          font-size: 14px;
+          font-size: 20px;
         }
         .nav-link {
           color: var(--ink-2);
