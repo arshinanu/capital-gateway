@@ -64,7 +64,7 @@ export default function Footer({ onPrivacyClick }) {
             <a href="#">Complaints</a>
           </div>
           <div className="footer-reg">
-            <span>Appointed Representative of Swoop Finance Ltd · FRN: 936513 · ICO: ZA600162</span>
+            <span> FRN: 936513 · ICO: ZA600162</span>
           </div>
         </div>
       </div>

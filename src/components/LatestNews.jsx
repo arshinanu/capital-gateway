@@ -4,9 +4,20 @@ export default function LatestNews() {
   const [articles, setArticles] = useState([])
 
   useEffect(() => {
-    fetch('/news.json')
-      .then(r => r.json())
-      .then(setArticles)
+    const SHEET_ID = '1xkcswQd7OVKpymthmh-BjkshYumFi0xIHjbdRsIXZa4'
+    fetch(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`)
+      .then(r => r.text())
+      .then(text => {
+        const json = JSON.parse(text.slice(47, -2))
+        const rows = json.table.rows.map(row => ({
+          tag:     row.c[0]?.v ?? '',
+          date:    row.c[1]?.v ?? '',
+          title:   row.c[2]?.v ?? '',
+          excerpt: row.c[3]?.v ?? '',
+          href:    row.c[4]?.v ?? '',
+        }))
+        setArticles(rows)
+      })
       .catch(() => {})
   }, [])
 
