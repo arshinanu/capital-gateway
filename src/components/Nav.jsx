@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -11,34 +12,35 @@ export default function Nav() {
   }, [])
 
   const links = [
-    { href: '#services', label: 'Services' },
-    { href: '#about', label: 'About' },
-    { href: '#calculator', label: 'Calculator' },
-    { href: '#testimonials', label: 'Clients' },
-    { href: '#news', label: 'News' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/#services', label: 'Services' },
+    { href: '/#about', label: 'About' },
+    { href: '/#calculator', label: 'Calculator' },
+    { href: '/#testimonials', label: 'Clients' },
+    { href: '/#news', label: 'News' },
+    { href: '/#contact', label: 'Contact' },
   ]
 
   return (
     <>
       <nav className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
         <div className="nav-inner">
-          <a href="#top" className="logo">
-            <img src="/logo.png" alt="Capital Gateway" className="logo-img" />
+          <a href="/" className="logo">
+            <img src="/white.png" alt="Capital Gateway" className="logo-img" />
           </a>
 
           <div className="nav-links">
             {links.map(l => (
               <a key={l.href} href={l.href} className="nav-link">{l.label}</a>
             ))}
+            <Link to="/apply" className="nav-link nav-link-apply">Apply</Link>
           </div>
 
-          <a href="#contact" className="btn btn-primary nav-cta">
+          <Link to="/apply" className="btn btn-primary nav-cta">
             Get Finance
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M3 11 L11 3 M5 3 H11 V9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
             </svg>
-          </a>
+          </Link>
 
           <button className="nav-burger" onClick={() => setOpen(!open)} aria-label="Menu">
             <span className={open ? 'open' : ''}></span>
@@ -48,13 +50,14 @@ export default function Nav() {
       </nav>
 
       {open && (
-        <div className="mobile-menu">
+        <div className="mobile-menu" style={{ top: scrolled ? '68px' : '84px' }}>
           {links.map(l => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
           ))}
-          <a href="#contact" onClick={() => setOpen(false)} className="btn btn-primary" style={{marginTop: 16, alignSelf: 'flex-start'}}>
+          <Link to="/apply" onClick={() => setOpen(false)}>Apply</Link>
+          <Link to="/apply" onClick={() => setOpen(false)} className="btn btn-primary" style={{marginTop: 16, alignSelf: 'flex-start'}}>
             Get Finance
-          </a>
+          </Link>
         </div>
       )}
 
@@ -68,7 +71,7 @@ export default function Nav() {
         }
         .nav-scrolled {
           backdrop-filter: blur(20px);
-          background: rgba(244, 241, 234, 0.75);
+          background: rgba(9, 12, 11, 0.85);
           border-bottom: 1px solid var(--line);
           padding: 12px 0;
         }
@@ -86,14 +89,16 @@ export default function Nav() {
           align-items: center;
         }
         .logo-img {
-          height: 166px;
+          height: 44px;
           width: auto;
           display: block;
+          transform: scale(3.55);
+          transform-origin: left center;
         }
         .nav-links {
           display: flex;
           gap: 36px;
-          font-size: 20px;
+          font-size: 15px;
         }
         .nav-link {
           color: var(--ink-2);
@@ -112,6 +117,10 @@ export default function Nav() {
           transition: width 0.3s var(--ease);
         }
         .nav-link:hover::after { width: 100%; }
+        .nav-link-apply {
+          color: var(--accent);
+          font-weight: 600;
+        }
 
         .nav-cta {
           padding: 10px 20px;
@@ -139,10 +148,9 @@ export default function Nav() {
 
         .mobile-menu {
           position: fixed;
-          top: 64px;
           left: 0;
           right: 0;
-          background: var(--ivory);
+          background: var(--forest);
           border-bottom: 1px solid var(--line);
           padding: 24px 32px;
           display: flex;

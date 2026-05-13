@@ -109,8 +109,8 @@ export default function Testimonials() {
           position: relative;
         }
         .quote-mark {
-          color: var(--forest);
-          opacity: 0.35;
+          color: var(--accent);
+          opacity: 0.2;
           margin-bottom: 32px;
         }
         .quote {
@@ -151,7 +151,7 @@ export default function Testimonials() {
           text-align: right;
         }
         .quote-meta strong {
-          color: var(--forest);
+          color: var(--accent);
           font-size: 28px;
           margin-top: 4px;
         }
@@ -172,9 +172,9 @@ export default function Testimonials() {
           transition: all 0.3s var(--ease);
         }
         .quote-nav button:hover {
-          background: var(--ink);
+          background: var(--accent);
           color: var(--paper);
-          border-color: var(--ink);
+          border-color: var(--accent);
         }
         .quote-dots {
           display: flex;
@@ -190,7 +190,7 @@ export default function Testimonials() {
           transition: all 0.3s var(--ease);
         }
         .quote-dots .dot.active {
-          background: var(--ink);
+          background: var(--accent);
           width: 24px;
           border-radius: 4px;
         }

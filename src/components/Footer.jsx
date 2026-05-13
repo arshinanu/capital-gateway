@@ -71,7 +71,7 @@ export default function Footer({ onPrivacyClick }) {
 
       <style>{`
         .footer {
-          background: var(--ink);
+          background: var(--forest);
           color: var(--paper);
           padding: 80px 0 32px;
           position: relative;

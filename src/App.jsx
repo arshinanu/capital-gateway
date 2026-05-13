@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import LendersStrip from './components/LendersStrip.jsx'
@@ -11,8 +12,9 @@ import LatestNews from './components/LatestNews.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import PrivacyPolicy from './components/PrivacyPolicy.jsx'
+import ApplyPage from './pages/ApplyPage.jsx'
 
-export default function App() {
+function HomePage() {
   const [showPrivacy, setShowPrivacy] = useState(false)
   const [showTop, setShowTop] = useState(false)
 
@@ -62,12 +64,12 @@ export default function App() {
           align-items: center;
           gap: 7px;
           padding: 11px 20px;
-          background: var(--ink);
-          color: var(--paper);
+          background: var(--ivory);
+          color: var(--ink);
           border-radius: 999px;
           font-size: 13px;
           font-weight: 500;
-          border: 1px solid rgba(255,255,255,0.1);
+          border: 1px solid var(--line);
           box-shadow: 0 4px 20px rgba(0,0,0,0.18);
           cursor: pointer;
           opacity: 0;
@@ -81,7 +83,9 @@ export default function App() {
           pointer-events: auto;
         }
         .back-to-top:hover {
-          background: var(--forest);
+          background: var(--accent);
+          color: var(--paper);
+          border-color: var(--accent);
         }
         @media (max-width: 560px) {
           .back-to-top {
@@ -92,5 +96,14 @@ export default function App() {
         }
       `}</style>
     </>
+  )
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/apply" element={<ApplyPage />} />
+    </Routes>
   )
 }

@@ -183,7 +183,7 @@ export default function Contact() {
           display: flex;
           align-items: center;
           justify-content: center;
-          color: var(--forest);
+          color: var(--accent);
           flex-shrink: 0;
         }
         .method span {
@@ -281,12 +281,12 @@ export default function Contact() {
           color: var(--muted);
           line-height: 1.6;
         }
-        .form-note a { color: var(--forest); text-decoration: underline; }
+        .form-note a { color: var(--accent); text-decoration: underline; }
 
         .form.success {
           text-align: center;
           padding: 60px 40px;
-          color: var(--forest);
+          color: var(--accent);
         }
         .form.success h3 {
           font-family: var(--font-display);

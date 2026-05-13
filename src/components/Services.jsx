@@ -199,6 +199,22 @@ export default function Services() {
             We connect you to a wide network of lenders — finding the right fit for your
             business or property finance needs, quickly and without the jargon.
           </p>
+          <div className="services-stats">
+            <div className="stat-pill">
+              <span className="stat-num">35+</span>
+              <span className="stat-label">Finance products</span>
+            </div>
+            <div className="stat-divider" />
+            <div className="stat-pill">
+              <span className="stat-num">4</span>
+              <span className="stat-label">Specialist categories</span>
+            </div>
+            <div className="stat-divider" />
+            <div className="stat-pill">
+              <span className="stat-num">1</span>
+              <span className="stat-label">Expert broker</span>
+            </div>
+          </div>
         </div>
 
         <div className="accordion">
@@ -216,12 +232,15 @@ export default function Services() {
                   <div className="acc-left">
                     <span className="acc-tag">{cat.tag}</span>
                     <div className="acc-label">
-                      <Icon size={22} strokeWidth={1.5} className="acc-icon" />
+                      <span className="acc-icon-wrap">
+                        <Icon size={18} strokeWidth={1.5} className="acc-icon" />
+                      </span>
                       <span className="acc-title">{cat.title}</span>
                     </div>
                   </div>
                   <div className="acc-right">
                     <span className="acc-summary">{cat.summary}</span>
+                    <span className="acc-count">{cat.items.length}</span>
                     <ChevronDown size={20} className="acc-chevron" strokeWidth={1.5} />
                   </div>
                 </button>
@@ -238,9 +257,10 @@ export default function Services() {
                           <span className="sub-num">{String(i + 1).padStart(2, '0')}</span>
                           <span className="sub-name">{item.name}</span>
                           <span className="sub-hint">
-                            Click to learn more
+                            Learn more
                             <ArrowRight size={11} strokeWidth={2} />
                           </span>
+                          <span className="sub-bar" />
                         </button>
                       ))}
                     </div>
@@ -256,13 +276,20 @@ export default function Services() {
 
       {/* Modal */}
       {selected && (
-        <div className="modal-backdrop" onClick={() => setSelected(null)}>
-          <div className="modal-box" onClick={e => e.stopPropagation()}>
+        <div className="modal-backdrop" onClick={() => setSelected(null)} role="presentation">
+          <div
+            className="modal-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="modal-header-strip" />
             <button className="modal-close" onClick={() => setSelected(null)} aria-label="Close">
               <X size={18} strokeWidth={1.5} />
             </button>
             <span className="modal-cat">{selected.catTitle}</span>
-            <h3 className="modal-title">{selected.name}</h3>
+            <h3 className="modal-title" id="modal-title">{selected.name}</h3>
             <p className="modal-desc">{selected.desc}</p>
             <a href="#contact" className="btn btn-primary modal-cta" onClick={() => setSelected(null)}>
               Discuss this option
@@ -277,7 +304,19 @@ export default function Services() {
           background: var(--paper);
           border-top: 1px solid var(--line);
           border-bottom: 1px solid var(--line);
+          position: relative;
+          overflow: hidden;
         }
+        .services::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background:
+            radial-gradient(ellipse 60% 40% at 100% 0%, rgba(0,232,122,0.04) 0%, transparent 70%),
+            radial-gradient(ellipse 40% 50% at 0% 100%, rgba(0,232,122,0.03) 0%, transparent 70%);
+          pointer-events: none;
+        }
+
         .services-head {
           max-width: 780px;
           margin-bottom: 64px;
@@ -291,6 +330,48 @@ export default function Services() {
           color: var(--muted);
           line-height: 1.6;
           max-width: 600px;
+          margin-bottom: 40px;
+        }
+
+        /* Stats row */
+        .services-stats {
+          display: flex;
+          align-items: center;
+          gap: 0;
+          width: fit-content;
+          border: 1px solid var(--line);
+          border-radius: 14px;
+          overflow: hidden;
+          background: var(--ivory);
+        }
+        .stat-pill {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 14px 28px;
+          gap: 2px;
+        }
+        .stat-num {
+          font-family: var(--font-display);
+          font-size: 26px;
+          font-weight: 600;
+          letter-spacing: -0.03em;
+          color: var(--accent);
+          line-height: 1;
+        }
+        .stat-label {
+          font-family: var(--font-mono);
+          font-size: 9px;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+          color: var(--muted);
+          white-space: nowrap;
+        }
+        .stat-divider {
+          width: 1px;
+          height: 36px;
+          background: var(--line);
+          flex-shrink: 0;
         }
 
         /* Accordion */
@@ -298,11 +379,26 @@ export default function Services() {
           border: 1px solid var(--line);
           border-radius: 20px;
           overflow: hidden;
+          box-shadow: 0 2px 24px rgba(0,232,122,0.04);
         }
         .acc-item {
           border-bottom: 1px solid var(--line);
+          position: relative;
         }
         .acc-item:last-child { border-bottom: none; }
+        .acc-item::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 3px;
+          background: var(--accent);
+          transform: scaleY(0);
+          transform-origin: top;
+          transition: transform 0.35s var(--ease);
+        }
+        .acc-open::before { transform: scaleY(1); }
 
         .acc-trigger {
           width: 100%;
@@ -322,7 +418,7 @@ export default function Services() {
           display: flex;
           flex-direction: column;
           gap: 10px;
-          min-width: 260px;
+          min-width: 270px;
           flex-shrink: 0;
         }
         .acc-tag {
@@ -335,18 +431,39 @@ export default function Services() {
           border: 1px solid var(--line);
           border-radius: 999px;
           width: fit-content;
+          transition: background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+        }
+        .acc-open .acc-tag {
+          background: var(--accent);
+          color: var(--paper);
+          border-color: var(--accent);
         }
         .acc-label {
           display: flex;
           align-items: center;
           gap: 12px;
         }
+        .acc-icon-wrap {
+          width: 36px;
+          height: 36px;
+          border-radius: 10px;
+          background: var(--ivory-2);
+          border: 1px solid var(--line);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+        }
+        .acc-open .acc-icon-wrap {
+          background: var(--accent);
+          border-color: var(--accent);
+        }
         .acc-icon {
           color: var(--ink);
-          flex-shrink: 0;
           transition: color 0.3s var(--ease);
         }
-        .acc-open .acc-icon { color: var(--forest); }
+        .acc-open .acc-icon { color: var(--paper); }
         .acc-title {
           font-family: var(--font-display);
           font-size: 22px;
@@ -358,7 +475,7 @@ export default function Services() {
           flex: 1;
           display: flex;
           align-items: center;
-          gap: 24px;
+          gap: 20px;
         }
         .acc-summary {
           flex: 1;
@@ -366,14 +483,30 @@ export default function Services() {
           color: var(--muted);
           line-height: 1.5;
         }
+        .acc-count {
+          font-family: var(--font-mono);
+          font-size: 11px;
+          color: var(--muted);
+          background: var(--ivory-2);
+          border: 1px solid var(--line);
+          border-radius: 999px;
+          padding: 3px 10px;
+          flex-shrink: 0;
+          transition: background 0.25s var(--ease), color 0.25s var(--ease);
+        }
+        .acc-open .acc-count {
+          background: rgba(0,232,122,0.1);
+          color: var(--accent);
+          border-color: rgba(0,232,122,0.25);
+        }
         .acc-chevron {
           flex-shrink: 0;
           color: var(--muted);
-          transition: transform 0.35s var(--ease);
+          transition: transform 0.35s var(--ease), color 0.25s var(--ease);
         }
         .acc-open .acc-chevron {
           transform: rotate(180deg);
-          color: var(--forest);
+          color: var(--accent);
         }
 
         .acc-body {
@@ -384,10 +517,10 @@ export default function Services() {
         .acc-open .acc-body { grid-template-rows: 1fr; }
         .acc-inner { overflow: hidden; }
 
-        /* Sub-item grid — compact tiles */
+        /* Sub-item grid */
         .sub-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+          grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
           gap: 1px;
           background: var(--line);
           border-top: 1px solid var(--line);
@@ -401,20 +534,36 @@ export default function Services() {
           gap: 8px;
           cursor: pointer;
           text-align: left;
-          transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+          transition: background 0.2s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+          position: relative;
+          overflow: hidden;
         }
         .sub-card:hover {
           background: var(--ivory);
-          transform: scale(1.02);
           z-index: 1;
-          position: relative;
+          transform: perspective(500px) translateZ(8px);
+          box-shadow: 0 4px 16px rgba(0,232,122,0.06);
         }
+        .sub-bar {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: var(--accent);
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.3s var(--ease);
+        }
+        .sub-card:hover .sub-bar { transform: scaleX(1); }
         .sub-num {
           font-family: var(--font-mono);
           font-size: 10px;
           color: var(--muted);
           letter-spacing: 0.08em;
+          transition: color 0.2s var(--ease);
         }
+        .sub-card:hover .sub-num { color: var(--accent); }
         .sub-name {
           font-family: var(--font-display);
           font-size: 15px;
@@ -422,13 +571,14 @@ export default function Services() {
           letter-spacing: -0.01em;
           line-height: 1.25;
           color: var(--ink);
+          flex: 1;
         }
         .sub-hint {
           display: inline-flex;
           align-items: center;
           gap: 4px;
           font-size: 11px;
-          color: var(--forest);
+          color: var(--accent);
           opacity: 0;
           transform: translateY(4px);
           transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
@@ -442,8 +592,8 @@ export default function Services() {
         .modal-backdrop {
           position: fixed;
           inset: 0;
-          background: rgba(20, 20, 18, 0.55);
-          backdrop-filter: blur(6px);
+          background: rgba(20, 20, 18, 0.6);
+          backdrop-filter: blur(8px);
           z-index: 200;
           display: flex;
           align-items: center;
@@ -463,11 +613,20 @@ export default function Services() {
           max-width: 560px;
           width: 100%;
           position: relative;
+          overflow: hidden;
           animation: zoomIn 0.25s cubic-bezier(0.34, 1.4, 0.64, 1);
         }
         @keyframes zoomIn {
           from { opacity: 0; transform: scale(0.88); }
           to   { opacity: 1; transform: scale(1); }
+        }
+        .modal-header-strip {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: linear-gradient(90deg, var(--accent-2), var(--accent) 60%, #6effc0 100%);
         }
         .modal-close {
           position: absolute;
@@ -483,12 +642,12 @@ export default function Services() {
           justify-content: center;
           cursor: pointer;
           color: var(--ink-2);
-          transition: background 0.2s var(--ease), color 0.2s var(--ease);
+          transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
         }
         .modal-close:hover {
-          background: var(--ink);
+          background: var(--accent);
           color: var(--paper);
-          border-color: var(--ink);
+          border-color: var(--accent);
         }
         .modal-cat {
           display: inline-block;
@@ -496,9 +655,9 @@ export default function Services() {
           font-size: 10px;
           text-transform: uppercase;
           letter-spacing: 0.14em;
-          color: var(--muted);
-          padding: 4px 10px;
-          border: 1px solid var(--line);
+          color: var(--paper);
+          background: var(--accent);
+          padding: 4px 12px;
           border-radius: 999px;
           margin-bottom: 16px;
         }
@@ -514,7 +673,7 @@ export default function Services() {
         .modal-desc {
           font-size: 15px;
           color: var(--muted);
-          line-height: 1.7;
+          line-height: 1.75;
           margin-bottom: 32px;
         }
         .modal-cta {
@@ -533,12 +692,17 @@ export default function Services() {
           .acc-left { min-width: unset; }
           .acc-right { width: 100%; }
           .acc-summary { display: none; }
+          .acc-count { display: none; }
           .sub-grid { grid-template-columns: 1fr 1fr; }
-          .modal-box { padding: 36px 28px 32px; }
+          .modal-box { padding: 40px 28px 32px; }
+          .services-stats { border-radius: 12px; }
+          .stat-pill { padding: 12px 20px; }
         }
         @media (max-width: 560px) {
           .sub-grid { grid-template-columns: 1fr; }
           .modal-title { font-size: 22px; }
+          .services-stats { width: 100%; }
+          .stat-pill { flex: 1; }
         }
       `}</style>
     </section>

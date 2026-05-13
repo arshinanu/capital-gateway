@@ -114,7 +114,7 @@ export default function LatestNews() {
           text-transform: uppercase;
           letter-spacing: 0.14em;
           color: var(--paper);
-          background: var(--forest);
+          background: var(--accent);
           padding: 4px 10px;
           border-radius: 999px;
         }
@@ -146,7 +146,7 @@ export default function LatestNews() {
           font-size: 11px;
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: var(--forest);
+          color: var(--accent);
           margin-top: auto;
           transition: gap 0.3s var(--ease);
         }

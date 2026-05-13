@@ -307,10 +307,10 @@ export default function PrivacyPolicy({ onClose }) {
           content: '–';
           position: absolute;
           left: 0;
-          color: var(--forest);
+          color: var(--accent);
         }
         .policy-section a {
-          color: var(--forest);
+          color: var(--accent);
           text-decoration: underline;
           text-underline-offset: 3px;
         }

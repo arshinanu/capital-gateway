@@ -118,7 +118,7 @@ export default function Calculator() {
 
           <div className="calc-result">
             <div className="result-head">
-              <span className="eyebrow" style={{color: 'rgba(251, 250, 246, 0.6)'}}>Indicative Result</span>
+              <span className="eyebrow">Indicative Result</span>
               <span className={`pill ${result.eligible ? 'ok' : 'warn'}`}>
                 <span className="dot"></span>
                 {result.eligible ? 'Likely eligible' : 'Speak with us'}
@@ -217,15 +217,16 @@ export default function Calculator() {
           border: 1px solid var(--line);
         }
         .calc-controls {
-          background: var(--paper);
+          background: var(--ivory);
           padding: 48px;
           display: flex;
           flex-direction: column;
           gap: 36px;
+          border-right: 1px solid var(--line);
         }
         .calc-result {
-          background: var(--ink);
-          color: var(--paper);
+          background: var(--forest);
+          color: var(--ink);
           padding: 48px;
           position: relative;
           overflow: hidden;
@@ -235,15 +236,25 @@ export default function Calculator() {
           position: absolute;
           top: -100px;
           right: -100px;
-          width: 300px;
-          height: 300px;
-          background: radial-gradient(circle, rgba(198, 255, 74, 0.15), transparent 70%);
+          width: 350px;
+          height: 350px;
+          background: radial-gradient(circle, rgba(0, 232, 122, 0.12), transparent 70%);
+          pointer-events: none;
+        }
+        .calc-result::after {
+          content: '';
+          position: absolute;
+          bottom: -60px;
+          left: -60px;
+          width: 200px;
+          height: 200px;
+          background: radial-gradient(circle, rgba(0, 232, 122, 0.06), transparent 70%);
           pointer-events: none;
         }
 
         .type-toggle {
           display: flex;
-          background: var(--ivory);
+          background: var(--ivory-2);
           border-radius: 999px;
           padding: 4px;
           border: 1px solid var(--line);
@@ -258,8 +269,9 @@ export default function Calculator() {
           color: var(--muted);
         }
         .type-toggle button.active {
-          background: var(--ink);
+          background: var(--accent);
           color: var(--paper);
+          box-shadow: 0 4px 16px -4px rgba(0, 232, 122, 0.4);
         }
 
         .result-head {
@@ -270,8 +282,12 @@ export default function Calculator() {
           position: relative;
           z-index: 1;
         }
+        .result-head .eyebrow {
+          color: var(--muted);
+        }
         .result-head .eyebrow::before {
-          background: rgba(251, 250, 246, 0.4);
+          background: var(--accent);
+          opacity: 0.4;
         }
         .pill {
           display: inline-flex;
@@ -281,7 +297,8 @@ export default function Calculator() {
           border-radius: 999px;
           font-size: 12px;
           font-family: var(--font-mono);
-          border: 1px solid rgba(251, 250, 246, 0.2);
+          border: 1px solid var(--line);
+          background: rgba(0, 232, 122, 0.05);
         }
         .pill .dot {
           width: 6px; height: 6px; border-radius: 50%;
@@ -299,7 +316,7 @@ export default function Calculator() {
           font-size: 11px;
           text-transform: uppercase;
           letter-spacing: 0.14em;
-          color: rgba(251, 250, 246, 0.6);
+          color: var(--muted);
           display: block;
           margin-bottom: 12px;
         }
@@ -312,7 +329,7 @@ export default function Calculator() {
         }
         .result-period {
           font-size: 20px;
-          color: rgba(251, 250, 246, 0.5);
+          color: var(--muted);
           margin-left: 8px;
         }
 
@@ -321,8 +338,8 @@ export default function Calculator() {
           grid-template-columns: 1fr 1fr;
           gap: 24px;
           padding: 32px 0;
-          border-top: 1px solid rgba(251, 250, 246, 0.15);
-          border-bottom: 1px solid rgba(251, 250, 246, 0.15);
+          border-top: 1px solid var(--line);
+          border-bottom: 1px solid var(--line);
           margin-bottom: 32px;
           position: relative;
           z-index: 1;
@@ -337,12 +354,13 @@ export default function Calculator() {
           font-size: 10px;
           text-transform: uppercase;
           letter-spacing: 0.12em;
-          color: rgba(251, 250, 246, 0.5);
+          color: var(--muted);
         }
         .result-grid strong {
           font-family: var(--font-display);
           font-size: 22px;
           font-weight: 500;
+          color: var(--ink);
         }
 
         .rate-display {
@@ -359,11 +377,13 @@ export default function Calculator() {
           font-family: var(--font-display);
           font-size: 22px;
           font-weight: 500;
+          color: var(--ink);
         }
         .rate-display svg {
-          opacity: 0.4;
+          opacity: 0.35;
           transition: opacity 0.2s;
           flex-shrink: 0;
+          color: var(--accent);
         }
         .rate-display:hover svg { opacity: 1; }
         .rate-edit {
@@ -373,10 +393,10 @@ export default function Calculator() {
         }
         .rate-input {
           width: 72px;
-          background: rgba(251,250,246,0.12);
-          border: 1px solid rgba(251,250,246,0.35);
+          background: rgba(0,232,122,0.08);
+          border: 1px solid rgba(0,232,122,0.3);
           border-radius: 6px;
-          color: var(--paper);
+          color: var(--ink);
           font-family: var(--font-display);
           font-size: 22px;
           font-weight: 500;
@@ -385,6 +405,7 @@ export default function Calculator() {
         }
         .rate-input:focus {
           border-color: var(--accent);
+          background: rgba(0,232,122,0.12);
         }
         .rate-input::-webkit-inner-spin-button,
         .rate-input::-webkit-outer-spin-button { -webkit-appearance: none; }
@@ -393,16 +414,19 @@ export default function Calculator() {
           font-size: 22px;
           font-weight: 500;
           margin-left: 2px;
+          color: var(--ink);
         }
 
         .result-cta {
           width: 100%;
           justify-content: center;
           margin-bottom: 20px;
+          position: relative;
+          z-index: 1;
         }
         .result-disclaimer {
           font-size: 11px;
-          color: rgba(251, 250, 246, 0.4);
+          color: var(--muted);
           line-height: 1.6;
           font-family: var(--font-mono);
           position: relative;
@@ -410,7 +434,8 @@ export default function Calculator() {
         }
 
         @media (max-width: 900px) {
-          .calc-panel { grid-template-columns: 1fr; }
+          .calc-panel { grid-template-columns: 1fr; border-right: none; }
+          .calc-controls { border-right: none; border-bottom: 1px solid var(--line); }
           .calc-controls, .calc-result { padding: 32px 24px; }
         }
       `}</style>
@@ -458,7 +483,7 @@ function Field({ label, value, min, max, step, val, onChange, hint }) {
           -webkit-appearance: none;
           width: 100%;
           height: 4px;
-          background: linear-gradient(to right, var(--ink) 0%, var(--ink) var(--pct), var(--line) var(--pct), var(--line) 100%);
+          background: linear-gradient(to right, var(--accent) 0%, var(--accent) var(--pct), var(--line) var(--pct), var(--line) 100%);
           border-radius: 2px;
           outline: none;
         }
@@ -466,16 +491,20 @@ function Field({ label, value, min, max, step, val, onChange, hint }) {
           -webkit-appearance: none;
           width: 20px; height: 20px;
           background: var(--accent);
-          border: 2px solid var(--ink);
+          border: 2px solid var(--paper);
           border-radius: 50%;
           cursor: grab;
-          transition: transform 0.2s var(--ease);
+          transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+          box-shadow: 0 0 0 0 rgba(0, 232, 122, 0.3);
         }
-        .field input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
+        .field input[type="range"]::-webkit-slider-thumb:hover {
+          transform: scale(1.2);
+          box-shadow: 0 0 0 6px rgba(0, 232, 122, 0.15);
+        }
         .field input[type="range"]::-moz-range-thumb {
           width: 20px; height: 20px;
           background: var(--accent);
-          border: 2px solid var(--ink);
+          border: 2px solid var(--paper);
           border-radius: 50%;
           cursor: grab;
         }

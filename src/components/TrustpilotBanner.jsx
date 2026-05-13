@@ -147,11 +147,11 @@ export default function TrustpilotBanner() {
           font-size: 12px;
           letter-spacing: 0.06em;
           text-transform: uppercase;
-          color: var(--ink);
+          color: var(--ink-2);
           display: flex;
           align-items: center;
           gap: 8px;
-          border-bottom: 1px solid var(--ink);
+          border-bottom: 1px solid var(--muted);
           padding-bottom: 2px;
           transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
           white-space: nowrap;
@@ -166,16 +166,18 @@ export default function TrustpilotBanner() {
           gap: 24px;
         }
         .tp-card {
+          background: var(--ivory);
           border: 1px solid var(--line);
           border-radius: 12px;
           padding: 28px 28px 24px;
           display: flex;
           flex-direction: column;
           gap: 12px;
-          transition: box-shadow 0.3s var(--ease), transform 0.3s var(--ease);
+          transition: box-shadow 0.3s var(--ease), transform 0.3s var(--ease), border-color 0.3s var(--ease);
         }
         .tp-card:hover {
-          box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+          box-shadow: 0 8px 32px rgba(0,232,122,0.06);
+          border-color: var(--muted);
           transform: translateY(-2px);
         }
         .tp-card-stars {
