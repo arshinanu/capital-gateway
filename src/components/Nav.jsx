@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -24,9 +25,17 @@ export default function Nav() {
     <>
       <nav className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
         <div className="nav-inner">
-          <a href="/" className="logo">
-            <img src="/white.png" alt="Capital Gateway" className="logo-img" />
-          </a>
+          <motion.a
+            href="/"
+            className="logo"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ scale: 1.06 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <img src="/white-01.png" alt="Capital Gateway" className="logo-img" />
+          </motion.a>
 
           <div className="nav-links">
             {links.map(l => (
@@ -92,7 +101,7 @@ export default function Nav() {
           height: 44px;
           width: auto;
           display: block;
-          transform: scale(3.55);
+          transform: scale(4.00);
           transform-origin: left center;
         }
         .nav-links {

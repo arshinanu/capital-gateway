@@ -1,4 +1,24 @@
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }
+  }
+})
+
+const titleContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } }
+}
+
+const wordVariant = {
+  hidden: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } }
+}
 
 export default function Hero() {
   return (
@@ -28,27 +48,53 @@ export default function Hero() {
       <div className="container hero-inner">
         {/* Content — left half */}
         <div className="hero-content">
-          <div className="hero-top-row reveal" style={{ animationDelay: '0s' }}>
+          <motion.div
+            className="hero-top-row"
+            variants={fadeUp(0)}
+            initial="hidden"
+            animate="visible"
+          >
             <span className="eyebrow">FCA Authorised · UK Finance Broker</span>
             <span className="status-pill">
               <span className="dot" />
               Accepting new clients
             </span>
-          </div>
+          </motion.div>
 
-          <h1 className="display hero-title reveal" style={{ animationDelay: '0.1s' }}>
-            Unlock finance<br/>
-            <span className="italic-accent">solutions</span><br/>
-            for your business.
-          </h1>
+          <motion.h1
+            className="display hero-title"
+            variants={titleContainer}
+            initial="hidden"
+            animate="visible"
+          >
+            {['Unlock', 'finance'].map((w, i) => (
+              <motion.span key={i} variants={wordVariant} style={{ display: 'inline-block', marginRight: '0.22em' }}>{w}</motion.span>
+            ))}
+            <br />
+            <motion.span variants={wordVariant} className="italic-accent" style={{ display: 'inline-block' }}>solutions</motion.span>
+            <br />
+            {['for', 'your', 'business.'].map((w, i) => (
+              <motion.span key={i} variants={wordVariant} style={{ display: 'inline-block', marginRight: '0.22em' }}>{w}</motion.span>
+            ))}
+          </motion.h1>
 
-          <p className="hero-lede reveal" style={{ animationDelay: '0.22s' }}>
+          <motion.p
+            className="hero-lede"
+            variants={fadeUp(0.55)}
+            initial="hidden"
+            animate="visible"
+          >
             Capital Gateway connects UK businesses and property owners to a wide
             network of lenders — delivering tailored finance with transparency,
             speed, and genuinely personalised service.
-          </p>
+          </motion.p>
 
-          <div className="hero-actions reveal" style={{ animationDelay: '0.32s' }}>
+          <motion.div
+            className="hero-actions"
+            variants={fadeUp(0.68)}
+            initial="hidden"
+            animate="visible"
+          >
             <Link to="/apply" className="btn btn-accent">
               Start an enquiry
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -56,9 +102,14 @@ export default function Hero() {
               </svg>
             </Link>
             <a href="#services" className="btn btn-ghost">View services</a>
-          </div>
+          </motion.div>
 
-          <div className="stat-strip reveal" style={{ animationDelay: '0.45s' }}>
+          <motion.div
+            className="stat-strip"
+            variants={fadeUp(0.82)}
+            initial="hidden"
+            animate="visible"
+          >
             {[
               { k: '400+', v: 'Lender network' },
               { k: '48hrs', v: 'Avg. decision' },
@@ -70,7 +121,7 @@ export default function Hero() {
                 <div className="stat-v">{s.v}</div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Floating cards — over the right (building) side */}

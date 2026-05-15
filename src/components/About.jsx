@@ -1,4 +1,18 @@
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+
+const zoomIn = (delay = 0) => ({
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }
+  }
+})
+
 export default function About() {
+  const [selectedIndex, setSelectedIndex] = useState(1)
+
   const pillars = [
     {
       n: '01.',
@@ -23,41 +37,71 @@ export default function About() {
       <div className="container">
 
         <div className="about-header">
-          <div className="about-header-left">
+          <motion.div
+            className="about-header-left"
+            variants={zoomIn(0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <span className="eyebrow">Why Capital Gateway</span>
             <h2 className="display about-title">
               A Trusted Finance <span className="italic-accent">Partner</span><br/>
               you can rely on.
             </h2>
-          </div>
-          <div className="about-header-right">
+          </motion.div>
+          <motion.div
+            className="about-header-right"
+            variants={zoomIn(0.15)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <p>
               From start-ups to seasoned property investors, we offer trusted lender connections
               and transparent finance solutions that help you make calm, informed funding decisions
               without the stress.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="pillars-row">
-          {pillars.map((p, i) => (
-            <div key={i} className={`pillar-card${p.featured ? ' pillar-featured' : ''}`}>
-              <span className="pillar-n">{p.n}</span>
-              <h3 className="pillar-t">{p.t}</h3>
-              <p className="pillar-d">{p.d}</p>
-              {p.featured && (
-                <a href="#contact" className="pillar-cta">
-                  Learn More
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M4 10H16M12 6l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
-              )}
-            </div>
-          ))}
+          {pillars.map((p, i) => {
+            const isSelected = selectedIndex === i
+            return (
+              <motion.div
+                key={i}
+                className={`pillar-card${isSelected ? ' pillar-featured' : ''}`}
+                onClick={() => setSelectedIndex(i)}
+                style={{ cursor: 'pointer' }}
+                variants={zoomIn(i * 0.1)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <span className="pillar-n">{p.n}</span>
+                <h3 className="pillar-t">{p.t}</h3>
+                <p className="pillar-d">{p.d}</p>
+                {isSelected && (
+                  <a href="#contact" className="pillar-cta">
+                    Learn More
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M4 10H16M12 6l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                )}
+              </motion.div>
+            )
+          })}
         </div>
 
-        <div className="about-fourth">
+        <motion.div
+          className="about-fourth"
+          variants={zoomIn(0)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <span className="pillar-n" style={{ flexShrink: 0 }}>04.</span>
           <div className="fourth-body">
             <h3>Fast, Reliable Decisions</h3>
@@ -67,7 +111,7 @@ export default function About() {
             <span className="fourth-num">48hrs</span>
             <span className="fourth-label">Avg. decision time</span>
           </div>
-        </div>
+        </motion.div>
 
       </div>
 
@@ -118,7 +162,7 @@ export default function About() {
           transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
         }
         .pillar-card:not(.pillar-featured):hover {
-          border-color: var(--muted);
+          border-color: var(--accent);
           transform: translateY(-2px);
         }
 
