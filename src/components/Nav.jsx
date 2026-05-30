@@ -159,7 +159,8 @@ export default function Nav() {
           position: fixed;
           left: 0;
           right: 0;
-          background: var(--forest);
+          background: rgba(9, 18, 13, 0.97);
+          backdrop-filter: blur(24px);
           border-bottom: 1px solid var(--line);
           padding: 24px 32px;
           display: flex;

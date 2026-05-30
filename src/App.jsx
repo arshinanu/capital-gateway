@@ -13,7 +13,6 @@ import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import PrivacyPolicy from './components/PrivacyPolicy.jsx'
 import ApplyPage from './pages/ApplyPage.jsx'
-
 function HomePage() {
   const [showPrivacy, setShowPrivacy] = useState(false)
   const [showTop, setShowTop] = useState(false)
@@ -28,25 +27,28 @@ function HomePage() {
 
   return (
     <>
-      <Nav />
-      <main>
-        <Hero />
-        <LendersStrip />
-        <Services />
-        <About />
-        <Calculator />
-        <Testimonials />
-        <TrustpilotBanner />
-        <LatestNews />
-        <Contact />
-      </main>
-      <Footer onPrivacyClick={() => setShowPrivacy(true)} />
-      {showPrivacy && <PrivacyPolicy onClose={() => setShowPrivacy(false)} />}
+      <div className="page-wrap">
+        <Nav />
+        <main>
+          <Hero />
+          <LendersStrip />
+          <Services />
+          <About />
+          <Calculator />
+          <Testimonials />
+          <TrustpilotBanner />
+          <LatestNews />
+          <Contact />
+        </main>
+        <Footer onPrivacyClick={() => setShowPrivacy(true)} />
+        {showPrivacy && <PrivacyPolicy onClose={() => setShowPrivacy(false)} />}
+      </div>
 
       <button
         className={`back-to-top${showTop ? ' visible' : ''}`}
         onClick={scrollTop}
         aria-label="Back to top"
+        style={{ position: 'fixed', zIndex: 150 }}
       >
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>

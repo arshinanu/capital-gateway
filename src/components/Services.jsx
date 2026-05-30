@@ -59,8 +59,8 @@ const categories = [
     id: 2,
     icon: Building2,
     tag: 'Bridging',
-    title: 'Bridging – Residential',
-    summary: 'Short-term bridging finance for time-critical residential transactions and property purchases.',
+    title: 'Bridging – Commercial and Residential',
+    summary: 'Short-term bridging finance for time-critical commercial and residential transactions and property purchases.',
     items: [
       {
         name: 'Quick Bridge (24/48 hr)',
@@ -108,8 +108,8 @@ const categories = [
     id: 3,
     icon: Layers,
     tag: 'Development',
-    title: 'Development Finance',
-    summary: 'Structured finance for ground-up builds, conversions, and large-scale refurbishment projects.',
+    title: 'Development Finance – Commercial and Residential',
+    summary: 'Structured finance for ground-up commercial and residential builds, conversions, and large-scale refurbishment projects.',
     items: [
       {
         name: 'Purchase Land With or Without Planning',
@@ -137,8 +137,8 @@ const categories = [
     id: 4,
     icon: Landmark,
     tag: 'Mortgage',
-    title: 'Mortgage – Commercial',
-    summary: 'Long-term mortgage solutions for commercial, semi-commercial, and investment properties.',
+    title: 'Mortgage – Commercial and Residential',
+    summary: 'Long-term mortgage solutions for commercial, residential, semi-commercial, and investment properties.',
     items: [
       {
         name: 'Purchase of Commercial Property',

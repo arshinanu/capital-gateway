@@ -225,7 +225,7 @@ export default function PrivacyPolicy({ onClose }) {
           padding: 24px;
         }
         .policy-modal {
-          background: var(--paper);
+          background: #090c0b;
           border: 1px solid var(--line);
           border-radius: 24px;
           width: 100%;

@@ -194,6 +194,9 @@ export default function Calculator() {
       </div>
 
       <style>{`
+        #calculator {
+          background: #090c0b;
+        }
         .calc-head {
           max-width: 700px;
           margin-bottom: 64px;
@@ -203,7 +206,7 @@ export default function Calculator() {
           margin: 24px 0 32px;
         }
         .calc-sub {
-          font-size: 17px;
+          font-size: 19px;
           color: var(--muted);
           line-height: 1.6;
         }
@@ -217,7 +220,7 @@ export default function Calculator() {
           border: 1px solid var(--line);
         }
         .calc-controls {
-          background: var(--ivory);
+          background: #111714;
           padding: 48px;
           display: flex;
           flex-direction: column;
@@ -225,7 +228,7 @@ export default function Calculator() {
           border-right: 1px solid var(--line);
         }
         .calc-result {
-          background: var(--forest);
+          background: #0d1f18;
           color: var(--ink);
           padding: 48px;
           position: relative;
@@ -263,7 +266,7 @@ export default function Calculator() {
         .type-toggle button {
           padding: 10px 22px;
           border-radius: 999px;
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 500;
           transition: all 0.3s var(--ease);
           color: var(--muted);
@@ -295,7 +298,7 @@ export default function Calculator() {
           gap: 8px;
           padding: 6px 14px;
           border-radius: 999px;
-          font-size: 12px;
+          font-size: 14px;
           font-family: var(--font-mono);
           border: 1px solid var(--line);
           background: rgba(0, 232, 122, 0.05);
@@ -313,7 +316,7 @@ export default function Calculator() {
         }
         .result-label {
           font-family: var(--font-mono);
-          font-size: 11px;
+          font-size: 13px;
           text-transform: uppercase;
           letter-spacing: 0.14em;
           color: var(--muted);
@@ -351,14 +354,14 @@ export default function Calculator() {
         }
         .result-grid span {
           font-family: var(--font-mono);
-          font-size: 10px;
+          font-size: 12px;
           text-transform: uppercase;
           letter-spacing: 0.12em;
           color: var(--muted);
         }
         .result-grid strong {
           font-family: var(--font-display);
-          font-size: 22px;
+          font-size: 26px;
           font-weight: 500;
           color: var(--ink);
         }
@@ -375,7 +378,7 @@ export default function Calculator() {
         }
         .rate-display strong {
           font-family: var(--font-display);
-          font-size: 22px;
+          font-size: 26px;
           font-weight: 500;
           color: var(--ink);
         }
@@ -392,13 +395,13 @@ export default function Calculator() {
           gap: 2px;
         }
         .rate-input {
-          width: 72px;
+          width: 80px;
           background: rgba(0,232,122,0.08);
           border: 1px solid rgba(0,232,122,0.3);
           border-radius: 6px;
           color: var(--ink);
           font-family: var(--font-display);
-          font-size: 22px;
+          font-size: 26px;
           font-weight: 500;
           padding: 2px 8px;
           outline: none;
@@ -411,7 +414,7 @@ export default function Calculator() {
         .rate-input::-webkit-outer-spin-button { -webkit-appearance: none; }
         .rate-pct {
           font-family: var(--font-display);
-          font-size: 22px;
+          font-size: 26px;
           font-weight: 500;
           margin-left: 2px;
           color: var(--ink);
@@ -425,7 +428,7 @@ export default function Calculator() {
           z-index: 1;
         }
         .result-disclaimer {
-          font-size: 11px;
+          font-size: 13px;
           color: var(--muted);
           line-height: 1.6;
           font-family: var(--font-mono);
@@ -468,14 +471,14 @@ function Field({ label, value, min, max, step, val, onChange, hint }) {
         }
         .field label {
           font-family: var(--font-mono);
-          font-size: 11px;
+          font-size: 13px;
           text-transform: uppercase;
           letter-spacing: 0.14em;
           color: var(--muted);
         }
         .field-value {
           font-family: var(--font-display);
-          font-size: 22px;
+          font-size: 26px;
           font-weight: 500;
           letter-spacing: -0.01em;
         }
@@ -510,7 +513,7 @@ function Field({ label, value, min, max, step, val, onChange, hint }) {
         }
         .field-hint {
           font-family: var(--font-mono);
-          font-size: 10px;
+          font-size: 12px;
           color: var(--muted);
           letter-spacing: 0.08em;
         }

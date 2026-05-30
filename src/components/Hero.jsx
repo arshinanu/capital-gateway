@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import VideoScrollBackground from './VideoScrollBackground'
 
 const fadeUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 24 },
@@ -23,18 +24,8 @@ const wordVariant = {
 export default function Hero() {
   return (
     <section id="top" className="hero">
-      {/* Background video */}
-      <div className="hero-bg" aria-hidden="true">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="hero-video"
-        >
-          <source src="/hero-bg.mp4" type="video/mp4" />
-        </video>
-      </div>
+      {/* Autoplay video background — scoped to hero only */}
+      <VideoScrollBackground />
 
       {/* Dark left-to-right gradient overlay so text stays readable */}
       <div className="hero-overlay" aria-hidden="true" />
@@ -54,7 +45,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            <span className="eyebrow">FCA Authorised · UK Finance Broker</span>
+            <span className="eyebrow fca-badge">FCA Authorised · UK Finance Broker</span>
             <span className="status-pill">
               <span className="dot" />
               Accepting new clients
@@ -155,25 +146,7 @@ export default function Hero() {
           padding-top: 120px;
           padding-bottom: 80px;
           overflow: hidden;
-        }
-
-        /* Full-bleed background video */
-        .hero-bg {
-          position: absolute;
-          inset: 0;
-          z-index: 0;
-          overflow: hidden;
-        }
-        .hero-video {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-          filter: blur(3px) brightness(0.75) contrast(1.1);
-          transform: scale(1.06); /* hide blur edges */
-          will-change: transform;
+          background: transparent;
         }
 
         /* Gradient overlay: solid left (text area) → semi-transparent right (video shows) */
@@ -242,6 +215,18 @@ export default function Hero() {
         @keyframes pulse {
           0%, 100% { box-shadow: 0 0 0 3px rgba(0,232,122,0.25); }
           50%       { box-shadow: 0 0 0 6px rgba(0,232,122,0); }
+        }
+
+        .fca-badge {
+          color: var(--accent);
+          background: rgba(0, 232, 122, 0.1);
+          border: 1px solid rgba(0, 232, 122, 0.3);
+          border-radius: 999px;
+          padding: 5px 14px 5px 10px;
+        }
+        .fca-badge::before {
+          background: var(--accent);
+          opacity: 1;
         }
 
         .hero-title {

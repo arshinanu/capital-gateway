@@ -185,6 +185,8 @@ export default function Registration() {
       notes: form.notes,
     }
 
+    const API_BASE = import.meta.env.VITE_API_URL ?? ''
+
     console.group('[LoanApplication] POST /api/loan-applications')
     console.log('Payload:', JSON.stringify(payload, null, 2))
 
@@ -193,7 +195,7 @@ export default function Registration() {
       fd.append('data', JSON.stringify(payload))
       bankStatements.forEach((file, i) => fd.append(`bankStatement_${i}`, file))
 
-      const res = await fetch('/api/loan-applications', {
+      const res = await fetch(`${API_BASE}/api/loan-applications`, {
         method: 'POST',
         body: fd,
       })

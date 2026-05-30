@@ -71,8 +71,8 @@ export default function Footer({ onPrivacyClick }) {
 
       <style>{`
         .footer {
-          background: var(--forest);
-          color: var(--paper);
+          background: #0d1f18;
+          color: var(--ink);
           padding: 80px 0 32px;
           position: relative;
           overflow: hidden;
@@ -97,7 +97,7 @@ export default function Footer({ onPrivacyClick }) {
           display: block;
         }
         .footer-brand p {
-          color: rgba(251, 250, 246, 0.6);
+          color: rgba(251, 250, 246, 0.82);
           font-size: 14px;
           line-height: 1.6;
           max-width: 320px;
@@ -112,7 +112,7 @@ export default function Footer({ onPrivacyClick }) {
           font-size: 11px;
           text-transform: uppercase;
           letter-spacing: 0.14em;
-          color: rgba(251, 250, 246, 0.4);
+          color: rgba(251, 250, 246, 0.65);
           margin-bottom: 20px;
           font-weight: 500;
         }
@@ -139,7 +139,7 @@ export default function Footer({ onPrivacyClick }) {
           height: 40px;
           border-radius: 50%;
           border: 1px solid rgba(251, 250, 246, 0.2);
-          color: rgba(251, 250, 246, 0.6);
+          color: rgba(251, 250, 246, 0.78);
           transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
         }
         .footer-social a:hover {
@@ -178,14 +178,14 @@ export default function Footer({ onPrivacyClick }) {
         .footer-legal span, .footer-legal a, .footer-reg span {
           font-family: var(--font-mono);
           font-size: 11px;
-          color: rgba(251, 250, 246, 0.5);
+          color: rgba(251, 250, 246, 0.72);
           letter-spacing: 0.04em;
         }
         .footer-legal a:hover { color: var(--accent); }
         .footer-policy-btn {
           font-family: var(--font-mono);
           font-size: 11px;
-          color: rgba(251, 250, 246, 0.5);
+          color: rgba(251, 250, 246, 0.72);
           letter-spacing: 0.04em;
           transition: color 0.3s var(--ease);
         }

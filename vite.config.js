@@ -6,8 +6,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8080',
+        target: 'https://pipedrive-timeline-production.up.railway.app',
         changeOrigin: true,
+        secure: true,
       },
     },
   },
