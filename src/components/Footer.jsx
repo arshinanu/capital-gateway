@@ -8,8 +8,9 @@ export default function Footer({ onPrivacyClick }) {
               <img src="/white-01.png" alt="Capital Gateway" className="footer-logo-img" />
             </a>
             <p>
-              FCA authorised credit broker connecting UK businesses and property owners
-              to tailored finance solutions across a wide lender network.
+              From start-ups to seasoned businesses across all credit profiles, and from
+              emerging to professional property investors — we offer tailored finance
+              solutions through a curated lender network.
             </p>
             <div className="footer-social">
               <a href="https://www.instagram.com/capitalgatewayltd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -51,6 +52,30 @@ export default function Footer({ onPrivacyClick }) {
               <a href="tel:07538346421">07538 346 421</a>
               <a href="mailto:Info@capitalgatewayltd.com">Info@capitalgatewayltd.com</a>
             </div>
+          </div>
+        </div>
+
+        <div className="footer-credentials">
+          <div className="footer-cred-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>Regulated by the Financial Conduct Authority</span>
+          </div>
+          <div className="footer-cred-divider" />
+          <div className="footer-cred-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+            </svg>
+            <span>Member of NACFB &amp; CMI</span>
+          </div>
+          <div className="footer-cred-divider" />
+          <div className="footer-cred-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Qualified &amp; experienced professionals at your service</span>
           </div>
         </div>
 
@@ -147,6 +172,41 @@ export default function Footer({ onPrivacyClick }) {
           color: var(--accent);
         }
 
+        .footer-credentials {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 0;
+          padding: 28px 0;
+          border-bottom: 1px solid rgba(251, 250, 246, 0.08);
+        }
+        .footer-cred-item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 0 28px;
+          color: rgba(251, 250, 246, 0.65);
+        }
+        .footer-cred-item svg {
+          flex-shrink: 0;
+          color: var(--accent);
+          opacity: 0.85;
+        }
+        .footer-cred-item span {
+          font-family: var(--font-mono);
+          font-size: 11px;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+        .footer-cred-divider {
+          width: 1px;
+          height: 18px;
+          background: rgba(251, 250, 246, 0.15);
+          flex-shrink: 0;
+        }
+
         .footer-big {
           font-family: var(--font-display);
           font-size: clamp(100px, 22vw, 320px);
@@ -199,6 +259,18 @@ export default function Footer({ onPrivacyClick }) {
           .footer-cols {
             grid-template-columns: 1fr 1fr;
             gap: 32px;
+          }
+          .footer-credentials {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 28px 0;
+          }
+          .footer-cred-item {
+            padding: 0 4px;
+          }
+          .footer-cred-divider {
+            display: none;
           }
         }
       `}</style>

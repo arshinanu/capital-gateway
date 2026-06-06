@@ -7,7 +7,7 @@ export default function LendersStrip() {
     <section className="lenders">
       <div className="container">
         <p className="lenders-label">
-          <span className="eyebrow">Panel of 120+ lenders · Including</span>
+          <span className="eyebrow">Panel of 400+ lenders · Including</span>
         </p>
         <div className="lenders-track">
           <div className="lenders-row">

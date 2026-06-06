@@ -13,6 +13,7 @@ import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import PrivacyPolicy from './components/PrivacyPolicy.jsx'
 import ApplyPage from './pages/ApplyPage.jsx'
+import LoginPage from './pages/LoginPage.jsx'
 function HomePage() {
   const [showPrivacy, setShowPrivacy] = useState(false)
   const [showTop, setShowTop] = useState(false)
@@ -106,6 +107,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/apply" element={<ApplyPage />} />
+      <Route path="/login" element={<LoginPage />} />
     </Routes>
   )
 }

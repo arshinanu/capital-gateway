@@ -42,6 +42,7 @@ export default function Nav() {
               <a key={l.href} href={l.href} className="nav-link">{l.label}</a>
             ))}
             <Link to="/apply" className="nav-link nav-link-apply">Apply</Link>
+            <Link to="/login" className="nav-link nav-link-login">Login</Link>
           </div>
 
           <Link to="/apply" className="btn btn-primary nav-cta">
@@ -64,6 +65,7 @@ export default function Nav() {
             <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
           ))}
           <Link to="/apply" onClick={() => setOpen(false)}>Apply</Link>
+          <Link to="/login" onClick={() => setOpen(false)}>Login</Link>
           <Link to="/apply" onClick={() => setOpen(false)} className="btn btn-primary" style={{marginTop: 16, alignSelf: 'flex-start'}}>
             Get Finance
           </Link>
@@ -130,6 +132,16 @@ export default function Nav() {
           color: var(--accent);
           font-weight: 600;
         }
+        .nav-link-login {
+          color: var(--ink-2);
+          font-weight: 500;
+          border: 1px solid var(--line);
+          padding: 6px 14px;
+          border-radius: 999px;
+          transition: border-color 0.25s var(--ease), color 0.25s var(--ease);
+        }
+        .nav-link-login:hover { border-color: var(--ink); color: var(--ink); }
+        .nav-link-login::after { display: none; }
 
         .nav-cta {
           padding: 10px 20px;
