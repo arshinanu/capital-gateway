@@ -79,7 +79,26 @@ export default function Footer({ onPrivacyClick }) {
           </div>
         </div>
 
-        <div className="footer-big">AHEAD, ALWAYS</div>
+        <div className="footer-partners">
+          <div className="footer-partner-group">
+            <span className="footer-partner-label">Member of</span>
+            <div className="footer-partner-logos">
+              <span className="footer-partner-badge">
+                <img src="/NAFCB.png" alt="NACFB — National Association of Commercial Finance Brokers" className="footer-partner-logo" />
+              </span>
+              <span className="footer-partner-badge">
+                <img src="/CMI.png" alt="CMI — Chartered Management Institute" className="footer-partner-logo" />
+              </span>
+            </div>
+          </div>
+          <div className="footer-partner-divider" />
+          <div className="footer-partner-group">
+            <span className="footer-partner-label">Powered by</span>
+            <span className="footer-partner-badge">
+              <img src="/Swoop.png" alt="Swoop" className="footer-partner-logo" />
+            </span>
+          </div>
+        </div>
 
         <div className="footer-bottom">
           <div className="footer-legal">
@@ -207,17 +226,59 @@ export default function Footer({ onPrivacyClick }) {
           flex-shrink: 0;
         }
 
-        .footer-big {
-          font-family: var(--font-display);
-          font-size: clamp(100px, 22vw, 320px);
-          letter-spacing: -0.06em;
-          line-height: 0.85;
-          color: rgba(251, 250, 246, 0.08);
-          text-align: center;
-          margin: 60px 0 40px;
-          font-weight: 400;
-          font-variation-settings: "opsz" 144;
-          user-select: none;
+        .footer-partners {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 40px;
+          padding: 48px 0;
+        }
+        .footer-partner-group {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }
+        .footer-partner-label {
+          font-family: var(--font-mono);
+          font-size: 11px;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: rgba(251, 250, 246, 0.5);
+          white-space: nowrap;
+        }
+        .footer-partner-logos {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        .footer-partner-badge {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--ink, #fbfaf6);
+          border-radius: 10px;
+          padding: 10px 18px;
+        }
+        .footer-partner-logo {
+          height: 26px;
+          width: auto;
+          display: block;
+        }
+        .footer-partner-divider {
+          width: 1px;
+          height: 32px;
+          background: rgba(251, 250, 246, 0.12);
+        }
+
+        @media (max-width: 600px) {
+          .footer-partners {
+            flex-direction: column;
+            gap: 28px;
+          }
+          .footer-partner-divider {
+            display: none;
+          }
         }
 
         .footer-bottom {

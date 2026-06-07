@@ -113,6 +113,51 @@ export default function About() {
           </div>
         </motion.div>
 
+        <motion.div
+          className="about-company"
+          variants={zoomIn(0)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <span className="eyebrow">About Capital Gateway</span>
+          <div className="about-company-body">
+            <p>
+              Capital Gateway Ltd is a UK-registered finance brokerage providing tailored
+              funding solutions for businesses, property investors and individuals.
+            </p>
+            <p>
+              We support clients with access to a range of finance options, including
+              business finance, property finance, commercial lending, bridging finance and
+              development finance. Our role is to understand each client's requirements,
+              identify suitable lending options and guide them through the process with
+              clarity and professionalism.
+            </p>
+            <p>
+              Capital Gateway Ltd is listed on the Financial Conduct Authority Register
+              under FRN 1044594. We are a credit broker, not a lender. We are also
+              registered with the Information Commissioner's Office, ICO Registration
+              Number ZB99626, reflecting our commitment to data protection and GDPR
+              compliance.
+            </p>
+            <p>
+              Capital Gateway Ltd is a member of the National Association of Commercial
+              Finance Brokers (NACFB), the UK's largest independent trade body for
+              commercial finance brokers, and a member of the Chartered Management
+              Institute (CMI), supporting our commitment to professional standards and
+              responsible business practice.
+            </p>
+            <p>
+              Capital Gateway Ltd is registered in England and Wales under Company Number
+              16671404.
+            </p>
+          </div>
+          <p className="about-company-tagline">
+            Capital Gateway — your trusted <span className="italic-accent">gateway</span> to
+            business and property finance.
+          </p>
+        </motion.div>
+
       </div>
 
       <style>{`
@@ -270,6 +315,50 @@ export default function About() {
           text-transform: uppercase;
           letter-spacing: 0.12em;
           color: var(--muted);
+        }
+
+        /* Company / regulatory details */
+        .about-company {
+          margin-top: 24px;
+          padding: 48px;
+          background: var(--ivory);
+          border: 1px solid var(--line);
+          border-radius: 16px;
+        }
+        .about-company .eyebrow {
+          display: inline-block;
+          margin-bottom: 24px;
+        }
+        .about-company-body {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 24px 48px;
+        }
+        .about-company-body p {
+          font-size: 14px;
+          color: var(--muted);
+          line-height: 1.75;
+          margin: 0;
+        }
+        .about-company-tagline {
+          margin: 32px 0 0;
+          padding-top: 32px;
+          border-top: 1px solid var(--line);
+          font-family: var(--font-display);
+          font-size: 20px;
+          font-weight: 500;
+          letter-spacing: -0.01em;
+          color: var(--ink);
+        }
+
+        @media (max-width: 900px) {
+          .about-company {
+            padding: 32px 24px;
+          }
+          .about-company-body {
+            grid-template-columns: 1fr;
+            gap: 20px;
+          }
         }
 
         @media (max-width: 900px) {
