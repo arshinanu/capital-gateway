@@ -14,6 +14,7 @@ import Footer from './components/Footer.jsx'
 import PrivacyPolicy from './components/PrivacyPolicy.jsx'
 import ApplyPage from './pages/ApplyPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
+import DocumentUploadPage from './pages/DocumentUploadPage.jsx'
 function HomePage() {
   const [showPrivacy, setShowPrivacy] = useState(false)
   const [showTop, setShowTop] = useState(false)
@@ -108,6 +109,7 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/apply" element={<ApplyPage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/upload" element={<DocumentUploadPage />} />
     </Routes>
   )
 }
