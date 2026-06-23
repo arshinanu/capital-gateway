@@ -50,6 +50,7 @@ export default function DocumentUploadPage() {
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [showPrivacy, setShowPrivacy] = useState(false)
+  const [termsAccepted, setTermsAccepted] = useState(false)
 
   const inputRef = useRef(null)
 
@@ -92,6 +93,7 @@ export default function DocumentUploadPage() {
     e.preventDefault()
     if (!docType) { setFormError('Please select a document type.'); return }
     if (files.length === 0) { setFormError('Please attach at least one file.'); return }
+    if (!termsAccepted) { setFormError('You must accept the Privacy & Cookie Policy to continue.'); return }
     setFormError('')
     setLoading(true)
 
@@ -261,6 +263,26 @@ export default function DocumentUploadPage() {
                 {fileErrors.map(err => <li key={err}>{err}</li>)}
               </ul>
             )}
+
+            {/* Terms & Conditions checkbox */}
+            <label className="upload-terms">
+              <input
+                type="checkbox"
+                checked={termsAccepted}
+                onChange={e => { setTermsAccepted(e.target.checked); if (formError) setFormError('') }}
+                className="upload-terms-checkbox"
+              />
+              <span className="upload-terms-text">
+                I have read and agree to the{' '}
+                <button
+                  type="button"
+                  className="upload-terms-link"
+                  onClick={() => setShowPrivacy(true)}
+                >
+                  Privacy &amp; Cookie Policy
+                </button>
+              </span>
+            </label>
 
             {formError && <p className="upload-form-error">{formError}</p>}
 
@@ -650,6 +672,69 @@ export default function DocumentUploadPage() {
           justify-content: center;
           font-size: 15px;
         }
+
+        .upload-terms {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          cursor: pointer;
+        }
+
+        .upload-terms-checkbox {
+          appearance: none;
+          -webkit-appearance: none;
+          width: 18px;
+          height: 18px;
+          min-width: 18px;
+          border: 1.5px solid var(--line);
+          border-radius: 5px;
+          background: var(--ivory);
+          cursor: pointer;
+          margin-top: 1px;
+          transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+          position: relative;
+        }
+        .upload-terms-checkbox:checked {
+          background: var(--accent);
+          border-color: var(--accent);
+        }
+        .upload-terms-checkbox:checked::after {
+          content: '';
+          position: absolute;
+          left: 4px;
+          top: 1px;
+          width: 5px;
+          height: 9px;
+          border: 1.5px solid #000;
+          border-top: none;
+          border-left: none;
+          transform: rotate(45deg);
+        }
+        .upload-terms-checkbox:focus-visible {
+          outline: 2px solid var(--accent);
+          outline-offset: 2px;
+        }
+
+        .upload-terms-text {
+          font-size: 13px;
+          color: var(--muted);
+          line-height: 1.55;
+        }
+
+        .upload-terms-link {
+          color: var(--accent);
+          font-weight: 500;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+          background: none;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          font-size: inherit;
+          font-family: inherit;
+          transition: opacity 0.2s;
+        }
+        .upload-terms-link:hover { opacity: 0.75; }
 
         @media (max-width: 560px) {
           .upload-card {
