@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import { Building2, TrendingUp, Check, ArrowLeft, ArrowRight, User, Briefcase, Upload, FileText, X } from 'lucide-react'
+import PrivacyPolicy from './PrivacyPolicy.jsx'
 
 const PRODUCTS = {
   business: [
@@ -104,6 +105,8 @@ export default function Registration() {
   const [bankStatements, setBankStatements] = useState([])
   const [showUploadModal, setShowUploadModal] = useState(false)
   const [dragOver, setDragOver] = useState(false)
+  const [showPrivacy, setShowPrivacy] = useState(false)
+  const [termsAccepted, setTermsAccepted] = useState(false)
   const fileInputRef = useRef(null)
 
   const up = (k) => (e) => {
@@ -147,6 +150,10 @@ export default function Registration() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (!termsAccepted) {
+      setServerError('You must accept the Privacy & Cookie Policy to continue.')
+      return
+    }
     setLoading(true)
     setServerError('')
 
@@ -220,7 +227,7 @@ export default function Registration() {
     }
   }
 
-  const reset = () => { setForm(EMPTY); setStep(0); setSubmitted(false); setErrors({}); setServerError(''); setBankStatements([]) }
+  const reset = () => { setForm(EMPTY); setStep(0); setSubmitted(false); setErrors({}); setServerError(''); setBankStatements([]); setTermsAccepted(false) }
 
   const addFiles = (files) => {
     const allowed = Array.from(files).filter(f => /\.(pdf|jpg|jpeg|png)$/i.test(f.name))
@@ -722,6 +729,25 @@ export default function Registration() {
                     By submitting you consent to Capital Gateway contacting you about your enquiry. Your data is
                     processed in line with our privacy policy and will not be shared without your explicit consent.
                   </p>
+
+                  <label className="reg-terms">
+                    <input
+                      type="checkbox"
+                      checked={termsAccepted}
+                      onChange={(e) => { setTermsAccepted(e.target.checked); if (serverError) setServerError('') }}
+                      className="reg-terms-checkbox"
+                    />
+                    <span className="reg-terms-text">
+                      I have read and agree to the{' '}
+                      <button
+                        type="button"
+                        className="reg-terms-link"
+                        onClick={() => setShowPrivacy(true)}
+                      >
+                        Privacy &amp; Cookie Policy
+                      </button>
+                    </span>
+                  </label>
                 </div>
               )}
 
@@ -742,7 +768,7 @@ export default function Registration() {
                     <ArrowRight size={15} strokeWidth={1.8} />
                   </button>
                 ) : (
-                  <button type="submit" className="btn btn-primary nav-next" disabled={loading}>
+                  <button type="submit" className="btn btn-primary nav-next" disabled={loading || !termsAccepted}>
                     {loading ? 'Submitting…' : 'Submit application'}
                     {!loading && <ArrowRight size={15} strokeWidth={1.8} />}
                   </button>
@@ -753,6 +779,8 @@ export default function Registration() {
         </div>
 
       </div>
+
+      {showPrivacy && <PrivacyPolicy onClose={() => setShowPrivacy(false)} />}
 
       <style>{`
         .registration {
@@ -1085,6 +1113,66 @@ export default function Registration() {
           border: 1px solid var(--line);
           border-radius: 10px;
         }
+
+        /* Terms & conditions */
+        .reg-terms {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          cursor: pointer;
+        }
+        .reg-terms-checkbox {
+          appearance: none;
+          -webkit-appearance: none;
+          width: 18px;
+          height: 18px;
+          flex-shrink: 0;
+          border: 1.5px solid var(--line);
+          border-radius: 5px;
+          background: var(--ivory);
+          cursor: pointer;
+          margin-top: 1px;
+          transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+          position: relative;
+        }
+        .reg-terms-checkbox:checked {
+          background: var(--accent);
+          border-color: var(--accent);
+        }
+        .reg-terms-checkbox:checked::after {
+          content: '';
+          position: absolute;
+          left: 4px;
+          top: 1px;
+          width: 6px;
+          height: 10px;
+          border: solid var(--paper);
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+        .reg-terms-checkbox:focus-visible {
+          outline: 2px solid var(--accent);
+          outline-offset: 2px;
+        }
+        .reg-terms-text {
+          font-size: 13px;
+          color: var(--muted);
+          line-height: 1.55;
+        }
+        .reg-terms-link {
+          color: var(--accent);
+          font-weight: 500;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+          background: none;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          font-size: inherit;
+          font-family: inherit;
+          transition: opacity 0.2s;
+        }
+        .reg-terms-link:hover { opacity: 0.75; }
 
         /* Server error */
         .server-error {
