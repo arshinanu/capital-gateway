@@ -120,20 +120,46 @@ export default function Registration() {
     setStep(0)
   }
 
+  const NAME_RE = /^[A-Za-z][A-Za-z\s'-]*$/
+  const POSTCODE_RE = /^[A-Za-z]{1,2}\d[A-Za-z\d]?\s*\d[A-Za-z]{2}$/
+  const NUMERIC_RE = /^[£$€]?[\d,]+(\.\d+)?$/
+
   const validateStep0 = () => {
     const e = {}
     if (!form.firstName.trim()) e.firstName = 'Required'
+    else if (!NAME_RE.test(form.firstName.trim())) e.firstName = 'Letters only'
+
     if (!form.lastName.trim()) e.lastName = 'Required'
+    else if (!NAME_RE.test(form.lastName.trim())) e.lastName = 'Letters only'
+
     if (!form.email.trim()) e.email = 'Required'
-    if (!/\S+@\S+\.\S+/.test(form.email)) e.email = 'Valid email required'
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) e.email = 'Enter a valid email address'
+
     if (!form.phone.trim()) e.phone = 'Required'
+    else if (form.phone.replace(/\D/g, '').length !== 10) e.phone = 'Enter a valid 10-digit phone number'
+
     return e
   }
 
   const validateStep1 = () => {
     const e = {}
     if (!form.financeProduct) e.financeProduct = 'Please select a product'
+
     if (!form.loanAmount.trim()) e.loanAmount = 'Required'
+    else if (!NUMERIC_RE.test(form.loanAmount.trim())) e.loanAmount = 'Enter a valid amount'
+
+    if (form.monthlyCardTurnover.trim() && !NUMERIC_RE.test(form.monthlyCardTurnover.trim())) {
+      e.monthlyCardTurnover = 'Enter a valid amount'
+    }
+
+    if (form.propertyValue.trim() && !NUMERIC_RE.test(form.propertyValue.trim())) {
+      e.propertyValue = 'Enter a valid amount'
+    }
+
+    if (form.propertyPostcode.trim() && !POSTCODE_RE.test(form.propertyPostcode.trim())) {
+      e.propertyPostcode = 'Enter a valid UK postcode'
+    }
+
     return e
   }
 
@@ -509,7 +535,9 @@ export default function Registration() {
                           <input
                             value={form.monthlyCardTurnover} onChange={up('monthlyCardTurnover')}
                             placeholder="e.g. £30,000 (for MCA)"
+                            className={errors.monthlyCardTurnover ? 'err' : ''}
                           />
+                          {errors.monthlyCardTurnover && <span className="err-msg">{errors.monthlyCardTurnover}</span>}
                         </Field>
                       </>
                     )}
@@ -535,13 +563,17 @@ export default function Registration() {
                           <input
                             value={form.propertyPostcode} onChange={up('propertyPostcode')}
                             placeholder="e.g. GL51 6RU"
+                            className={errors.propertyPostcode ? 'err' : ''}
                           />
+                          {errors.propertyPostcode && <span className="err-msg">{errors.propertyPostcode}</span>}
                         </Field>
                         <Field label="Estimated property value">
                           <input
                             value={form.propertyValue} onChange={up('propertyValue')}
                             placeholder="£750,000"
+                            className={errors.propertyValue ? 'err' : ''}
                           />
+                          {errors.propertyValue && <span className="err-msg">{errors.propertyValue}</span>}
                         </Field>
                         <Field label="Exit strategy">
                           <select value={form.exitStrategy} onChange={up('exitStrategy')}>
