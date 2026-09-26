@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { Building2, TrendingUp, Check, ArrowLeft, ArrowRight, User, Briefcase, Upload, FileText, X } from 'lucide-react'
+import { Building2, TrendingUp, Check, ArrowLeft, ArrowRight, User, Briefcase, Upload, FileText, X, MapPin } from 'lucide-react'
 import PrivacyPolicy from './PrivacyPolicy.jsx'
 
 const PRODUCTS = {
@@ -55,6 +55,9 @@ const COUNTRY_CODES = [
 const EMPTY = {
   /* Pipedrive: Person */
   firstName: '', lastName: '', email: '', phone: '', countryCode: '+44',
+  dateOfBirth: '',
+  /* Pipedrive: Person address */
+  addressLine1: '', addressLine2: '', city: '', county: '', postcode: '',
   /* Pipedrive: Organisation */
   companyName: '', companyType: '', industry: '', timeTrading: '',
   /* Pipedrive: Lead */
@@ -107,6 +110,8 @@ export default function Registration() {
   const [dragOver, setDragOver] = useState(false)
   const [showPrivacy, setShowPrivacy] = useState(false)
   const [termsAccepted, setTermsAccepted] = useState(false)
+  const [postcodeLookupLoading, setPostcodeLookupLoading] = useState(false)
+  const [postcodeLookupError, setPostcodeLookupError] = useState('')
   const fileInputRef = useRef(null)
 
   const up = (k) => (e) => {
@@ -124,6 +129,36 @@ export default function Registration() {
   const POSTCODE_RE = /^[A-Za-z]{1,2}\d[A-Za-z\d]?\s*\d[A-Za-z]{2}$/
   const NUMERIC_RE = /^[£$€]?[\d,]+(\.\d+)?$/
 
+  const lookupPostcode = async () => {
+    const pc = form.postcode.trim()
+    if (!pc) { setPostcodeLookupError('Enter a postcode first'); return }
+    if (!POSTCODE_RE.test(pc)) { setPostcodeLookupError('Enter a valid UK postcode'); return }
+
+    setPostcodeLookupError('')
+    setPostcodeLookupLoading(true)
+    try {
+      const res = await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(pc.replace(/\s+/g, ''))}`)
+      const data = await res.json().catch(() => null)
+
+      if (!res.ok || !data || data.status !== 200) {
+        setPostcodeLookupError('Postcode not found')
+        return
+      }
+
+      const r = data.result
+      setForm(f => ({
+        ...f,
+        city: r.admin_district || r.parish || f.city,
+        county: r.admin_county || r.region || f.county,
+      }))
+      if (errors.postcode) setErrors(er => ({ ...er, postcode: '' }))
+    } catch {
+      setPostcodeLookupError('Could not reach postcode service. Please enter address manually.')
+    } finally {
+      setPostcodeLookupLoading(false)
+    }
+  }
+
   const validateStep0 = () => {
     const e = {}
     if (!form.firstName.trim()) e.firstName = 'Required'
@@ -137,6 +172,17 @@ export default function Registration() {
 
     if (!form.phone.trim()) e.phone = 'Required'
     else if (form.phone.replace(/\D/g, '').length !== 10) e.phone = 'Enter a valid 10-digit phone number'
+
+    if (!form.dateOfBirth) e.dateOfBirth = 'Required'
+    else {
+      const age = (Date.now() - new Date(form.dateOfBirth).getTime()) / (365.25 * 24 * 3600 * 1000)
+      if (age < 18) e.dateOfBirth = 'Must be 18 or older'
+    }
+
+    if (!form.addressLine1.trim()) e.addressLine1 = 'Required'
+
+    if (!form.postcode.trim()) e.postcode = 'Required'
+    else if (!POSTCODE_RE.test(form.postcode.trim())) e.postcode = 'Enter a valid UK postcode'
 
     return e
   }
@@ -190,6 +236,14 @@ export default function Registration() {
         last_name: form.lastName,
         email: [{ value: form.email, primary: true, label: 'work' }],
         phone: [{ value: `${form.countryCode}${form.phone}`, primary: true, label: 'mobile' }],
+        date_of_birth: form.dateOfBirth,
+        address: {
+          line1: form.addressLine1,
+          line2: form.addressLine2,
+          city: form.city,
+          county: form.county,
+          postcode: form.postcode,
+        },
       },
       organization: {
         name: form.companyName,
@@ -404,6 +458,57 @@ export default function Registration() {
                         />
                       </div>
                       {errors.phone && <span className="err-msg">{errors.phone}</span>}
+                    </Field>
+                    <Field label="Date of birth">
+                      <input
+                        type="date" required value={form.dateOfBirth} onChange={up('dateOfBirth')}
+                        className={errors.dateOfBirth ? 'err' : ''}
+                      />
+                      {errors.dateOfBirth && <span className="err-msg">{errors.dateOfBirth}</span>}
+                    </Field>
+                  </div>
+
+                  <div className="section-label" style={{ marginTop: 28 }}>
+                    <MapPin size={14} strokeWidth={2} />
+                    Address
+                  </div>
+                  <div className="form-grid">
+                    <Field label="Address line 1" full>
+                      <input
+                        required value={form.addressLine1} onChange={up('addressLine1')}
+                        placeholder="123 High Street" className={errors.addressLine1 ? 'err' : ''}
+                      />
+                      {errors.addressLine1 && <span className="err-msg">{errors.addressLine1}</span>}
+                    </Field>
+                    <Field label="Address line 2 (optional)" full>
+                      <input
+                        value={form.addressLine2} onChange={up('addressLine2')}
+                        placeholder="Apartment, suite, etc."
+                      />
+                    </Field>
+                    <Field label="Postcode">
+                      <div className="postcode-field">
+                        <input
+                          value={form.postcode} onChange={up('postcode')}
+                          placeholder="e.g. SW1A 1AA" className={errors.postcode ? 'err' : ''}
+                        />
+                        <button
+                          type="button"
+                          className="postcode-lookup-btn"
+                          onClick={lookupPostcode}
+                          disabled={postcodeLookupLoading}
+                        >
+                          {postcodeLookupLoading ? 'Looking…' : 'Find address'}
+                        </button>
+                      </div>
+                      {errors.postcode && <span className="err-msg">{errors.postcode}</span>}
+                      {postcodeLookupError && <span className="err-msg">{postcodeLookupError}</span>}
+                    </Field>
+                    <Field label="Town / City">
+                      <input value={form.city} onChange={up('city')} placeholder="London" />
+                    </Field>
+                    <Field label="County">
+                      <input value={form.county} onChange={up('county')} placeholder="Greater London" />
                     </Field>
                   </div>
 
@@ -712,6 +817,14 @@ export default function Registration() {
                       <ReviewRow label="Name" value={`${form.firstName} ${form.lastName}`} />
                       <ReviewRow label="Email" value={form.email} />
                       <ReviewRow label="Phone" value={form.phone ? `${form.countryCode} ${form.phone}` : '—'} />
+                      <ReviewRow label="Date of birth" value={form.dateOfBirth || '—'} />
+                    </ReviewBlock>
+                    <ReviewBlock title="Address">
+                      <ReviewRow label="Address" value={form.addressLine1 || '—'} />
+                      {form.addressLine2 && <ReviewRow label="Address 2" value={form.addressLine2} />}
+                      <ReviewRow label="Town / City" value={form.city || '—'} />
+                      <ReviewRow label="County" value={form.county || '—'} />
+                      <ReviewRow label="Postcode" value={form.postcode || '—'} />
                     </ReviewBlock>
                     <ReviewBlock title={loanType === 'business' ? 'Business' : 'Applicant'}>
                       <ReviewRow label="Company" value={form.companyName || '—'} />
@@ -1079,6 +1192,36 @@ export default function Registration() {
           border-radius: 0 10px 10px 0;
           flex: 1;
           min-width: 0;
+        }
+        .postcode-field {
+          display: flex;
+          gap: 8px;
+        }
+        .postcode-field input {
+          flex: 1;
+          min-width: 0;
+        }
+        .postcode-lookup-btn {
+          flex-shrink: 0;
+          padding: 0 16px;
+          border: 1px solid var(--line);
+          border-radius: 10px;
+          background: var(--ivory-2);
+          font-size: 13px;
+          font-family: var(--font-body);
+          color: var(--ink-2);
+          cursor: pointer;
+          white-space: nowrap;
+          transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+        }
+        .postcode-lookup-btn:hover:not(:disabled) {
+          border-color: var(--accent);
+          color: var(--accent);
+          background: rgba(0,232,122,0.05);
+        }
+        .postcode-lookup-btn:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
         }
 
         /* Review */

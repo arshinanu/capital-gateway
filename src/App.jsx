@@ -12,6 +12,7 @@ import LatestNews from './components/LatestNews.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import PrivacyPolicy from './components/PrivacyPolicy.jsx'
+import WhatsAppButton from './components/WhatsAppButton.jsx'
 import ApplyPage from './pages/ApplyPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
 import DocumentUploadPage from './pages/DocumentUploadPage.jsx'
@@ -45,6 +46,8 @@ function HomePage() {
         <Footer onPrivacyClick={() => setShowPrivacy(true)} />
         {showPrivacy && <PrivacyPolicy onClose={() => setShowPrivacy(false)} />}
       </div>
+
+      <WhatsAppButton />
 
       <button
         className={`back-to-top${showTop ? ' visible' : ''}`}
