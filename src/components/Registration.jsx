@@ -942,7 +942,8 @@ export default function Registration() {
 
         /* ── Left panel ── */
         .reg-title {
-          font-size: clamp(40px, 5.5vw, 80px);
+          font-size: clamp(41px, calc(5.5vw + 1px), 81px);
+          font-weight: 600;
           margin: 24px 0 28px;
         }
         .reg-lede {
@@ -1025,8 +1026,8 @@ export default function Registration() {
         }
         .form-head h3 {
           font-family: var(--font-display);
-          font-size: 24px;
-          font-weight: 500;
+          font-size: 25px;
+          font-weight: 600;
           letter-spacing: -0.02em;
           margin-bottom: 4px;
         }
@@ -1400,8 +1401,8 @@ export default function Registration() {
         }
         .reg-form.success h3 {
           font-family: var(--font-display);
-          font-size: 32px;
-          font-weight: 500;
+          font-size: 33px;
+          font-weight: 600;
           letter-spacing: -0.02em;
           color: var(--ink);
         }
@@ -1515,8 +1516,8 @@ export default function Registration() {
         }
         .upload-modal-head h4 {
           font-family: var(--font-display);
-          font-size: 20px;
-          font-weight: 500;
+          font-size: 21px;
+          font-weight: 600;
           letter-spacing: -0.02em;
           margin-bottom: 4px;
         }

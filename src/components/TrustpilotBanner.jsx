@@ -186,8 +186,8 @@ export default function TrustpilotBanner() {
         }
         .tp-card-title {
           font-family: var(--font-display);
-          font-size: 17px;
-          font-weight: 500;
+          font-size: 18px;
+          font-weight: 600;
           color: var(--ink);
           line-height: 1.3;
           letter-spacing: -0.01em;

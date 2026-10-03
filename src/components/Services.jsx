@@ -322,11 +322,13 @@ export default function Services() {
           margin-bottom: 64px;
         }
         .services-title {
-          font-size: clamp(40px, 6vw, 80px);
+          font-size: clamp(41px, calc(6vw + 1px), 81px);
+          font-weight: 600;
           margin: 24px 0 32px;
         }
         .services-sub {
-          font-size: 17px;
+          font-size: 18px;
+          font-weight: 600;
           color: var(--muted);
           line-height: 1.6;
           max-width: 600px;
@@ -466,8 +468,8 @@ export default function Services() {
         .acc-open .acc-icon { color: var(--paper); }
         .acc-title {
           font-family: var(--font-display);
-          font-size: 22px;
-          font-weight: 500;
+          font-size: 23px;
+          font-weight: 600;
           letter-spacing: -0.02em;
           color: var(--ink);
         }
@@ -663,8 +665,8 @@ export default function Services() {
         }
         .modal-title {
           font-family: var(--font-display);
-          font-size: 28px;
-          font-weight: 500;
+          font-size: 29px;
+          font-weight: 600;
           letter-spacing: -0.02em;
           line-height: 1.15;
           color: var(--ink);
@@ -700,7 +702,7 @@ export default function Services() {
         }
         @media (max-width: 560px) {
           .sub-grid { grid-template-columns: 1fr; }
-          .modal-title { font-size: 22px; }
+          .modal-title { font-size: 23px; }
           .services-stats { width: 100%; }
           .stat-pill { flex: 1; }
         }

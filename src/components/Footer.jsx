@@ -141,7 +141,7 @@ export default function Footer({ onPrivacyClick }) {
           display: block;
         }
         .footer-brand p {
-          color: rgba(251, 250, 246, 0.82);
+          color: #ffffff;
           font-size: 14px;
           line-height: 1.6;
           max-width: 320px;
@@ -153,17 +153,17 @@ export default function Footer({ onPrivacyClick }) {
         }
         .footer-cols h4 {
           font-family: var(--font-mono);
-          font-size: 11px;
+          font-size: 12px;
           text-transform: uppercase;
           letter-spacing: 0.14em;
-          color: rgba(251, 250, 246, 0.65);
+          color: #ffffff;
           margin-bottom: 20px;
-          font-weight: 500;
+          font-weight: 600;
         }
         .footer-cols a, .footer-cols p {
           display: block;
           font-size: 14px;
-          color: rgba(251, 250, 246, 0.85);
+          color: #ffffff;
           margin-bottom: 10px;
           transition: color 0.3s var(--ease);
           line-height: 1.5;
@@ -183,7 +183,7 @@ export default function Footer({ onPrivacyClick }) {
           height: 40px;
           border-radius: 50%;
           border: 1px solid rgba(251, 250, 246, 0.2);
-          color: rgba(251, 250, 246, 0.78);
+          color: #ffffff;
           transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
         }
         .footer-social a:hover {
@@ -205,7 +205,7 @@ export default function Footer({ onPrivacyClick }) {
           align-items: center;
           gap: 8px;
           padding: 0 28px;
-          color: rgba(251, 250, 246, 0.65);
+          color: #ffffff;
         }
         .footer-cred-item svg {
           flex-shrink: 0;
@@ -244,7 +244,7 @@ export default function Footer({ onPrivacyClick }) {
           font-size: 11px;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: rgba(251, 250, 246, 0.5);
+          color: #ffffff;
           white-space: nowrap;
         }
         .footer-partner-logos {
@@ -299,14 +299,14 @@ export default function Footer({ onPrivacyClick }) {
         .footer-legal span, .footer-legal a, .footer-reg span {
           font-family: var(--font-mono);
           font-size: 11px;
-          color: rgba(251, 250, 246, 0.72);
+          color: #ffffff;
           letter-spacing: 0.04em;
         }
         .footer-legal a:hover { color: var(--accent); }
         .footer-policy-btn {
           font-family: var(--font-mono);
           font-size: 11px;
-          color: rgba(251, 250, 246, 0.72);
+          color: #ffffff;
           letter-spacing: 0.04em;
           transition: color 0.3s var(--ease);
         }

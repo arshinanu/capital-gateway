@@ -219,18 +219,35 @@ export default function Hero() {
 
         .fca-badge {
           color: var(--accent);
-          background: rgba(0, 232, 122, 0.1);
-          border: 1px solid rgba(0, 232, 122, 0.3);
+          font-size: 13px;
+          font-weight: 700;
+          letter-spacing: 0.14em;
+          background: rgba(0, 232, 122, 0.16);
+          border: 1px solid rgba(0, 232, 122, 0.7);
           border-radius: 999px;
-          padding: 5px 14px 5px 10px;
+          padding: 8px 18px 8px 8px;
+          box-shadow: 0 0 0 4px rgba(0, 232, 122, 0.08), 0 0 24px -4px rgba(0, 232, 122, 0.55);
+          text-shadow: 0 0 12px rgba(0, 232, 122, 0.45);
         }
         .fca-badge::before {
+          content: '✓';
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
           background: var(--accent);
+          color: var(--paper-solid);
+          font-size: 12px;
+          font-weight: 700;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          text-shadow: none;
           opacity: 1;
         }
 
         .hero-title {
-          font-size: clamp(52px, 8vw, 120px);
+          font-size: clamp(53px, calc(8vw + 1px), 121px);
+          font-weight: 600;
           line-height: 0.92;
           margin: 0;
         }
@@ -431,7 +448,7 @@ export default function Hero() {
 
         @media (max-width: 480px) {
           .hero { padding-top: 100px; padding-bottom: 60px; }
-          .hero-title { font-size: clamp(44px, 12vw, 72px); }
+          .hero-title { font-size: clamp(45px, calc(12vw + 1px), 73px); }
           .stat-strip { grid-template-columns: 1fr 1fr; }
         }
       `}</style>

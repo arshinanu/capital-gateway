@@ -202,11 +202,13 @@ export default function Calculator() {
           margin-bottom: 64px;
         }
         .calc-title {
-          font-size: clamp(40px, 6vw, 80px);
+          font-size: clamp(41px, calc(6vw + 1px), 81px);
+          font-weight: 600;
           margin: 24px 0 32px;
         }
         .calc-sub {
-          font-size: 19px;
+          font-size: 20px;
+          font-weight: 600;
           color: var(--muted);
           line-height: 1.6;
         }

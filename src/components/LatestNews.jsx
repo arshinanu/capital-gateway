@@ -73,7 +73,8 @@ export default function LatestNews() {
           margin-bottom: 64px;
         }
         .news-title {
-          font-size: clamp(56px, 8vw, 96px);
+          font-size: clamp(57px, calc(8vw + 1px), 97px);
+          font-weight: 600;
           margin-top: 16px;
         }
         .news-intro {
@@ -126,8 +127,8 @@ export default function LatestNews() {
         }
         .news-card-title {
           font-family: var(--font-display);
-          font-size: 20px;
-          font-weight: 400;
+          font-size: 21px;
+          font-weight: 600;
           letter-spacing: -0.02em;
           line-height: 1.2;
           color: var(--ink);
@@ -143,8 +144,9 @@ export default function LatestNews() {
           align-items: center;
           gap: 6px;
           font-family: var(--font-mono);
-          font-size: 11px;
-          letter-spacing: 0.1em;
+          font-size: 13px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
           text-transform: uppercase;
           color: var(--accent);
           margin-top: auto;
@@ -152,7 +154,9 @@ export default function LatestNews() {
         }
         .news-card:hover .news-read {
           gap: 10px;
-          color: var(--accent-2);
+          color: var(--accent);
+          text-decoration: underline;
+          text-underline-offset: 4px;
         }
 
         @media (max-width: 1024px) {

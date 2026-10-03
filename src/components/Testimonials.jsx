@@ -100,7 +100,8 @@ export default function Testimonials() {
           margin-bottom: 64px;
         }
         .test-title {
-          font-size: clamp(44px, 6.5vw, 88px);
+          font-size: clamp(45px, calc(6.5vw + 1px), 89px);
+          font-weight: 600;
           margin-top: 24px;
         }
         .test-panel {

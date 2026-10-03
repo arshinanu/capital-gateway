@@ -174,13 +174,15 @@ export default function About() {
         }
 
         .about-title {
-          font-size: clamp(36px, 5vw, 64px);
+          font-size: clamp(37px, calc(5vw + 1px), 65px);
+          font-weight: 600;
           margin: 20px 0 0;
           line-height: 1.05;
         }
 
         .about-header-right p {
-          font-size: 17px;
+          font-size: 18px;
+          font-weight: 600;
           color: var(--muted);
           line-height: 1.7;
           max-width: 440px;
@@ -236,8 +238,8 @@ export default function About() {
 
         .pillar-t {
           font-family: var(--font-display);
-          font-size: 22px;
-          font-weight: 500;
+          font-size: 23px;
+          font-weight: 600;
           letter-spacing: -0.02em;
           line-height: 1.2;
           color: var(--ink);
@@ -282,8 +284,8 @@ export default function About() {
 
         .fourth-body h3 {
           font-family: var(--font-display);
-          font-size: 22px;
-          font-weight: 500;
+          font-size: 23px;
+          font-weight: 600;
           letter-spacing: -0.02em;
           color: var(--ink);
           margin-bottom: 8px;

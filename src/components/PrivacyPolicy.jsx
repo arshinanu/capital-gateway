@@ -20,7 +20,7 @@ export default function PrivacyPolicy({ onClose }) {
             <h3>Our Contact Details</h3>
             <div className="contact-block">
               <p><strong>Capital Gateway Ltd</strong></p>
-              <p>170 Farmfield Road, Cheltenham, England, GL51 3RB</p>
+              <p>2 Leyson Road The Reddings Cheltenham ,GL516RU,Gloucestershire</p>
               <p>
                 <a href="tel:+447538346421">+44 7538 346421</a> &nbsp;/&nbsp;
                 <a href="tel:+447587592759">+44 7587 592759</a>
@@ -245,8 +245,8 @@ export default function PrivacyPolicy({ onClose }) {
         }
         .policy-title {
           font-family: var(--font-display);
-          font-size: 32px;
-          font-weight: 400;
+          font-size: 33px;
+          font-weight: 600;
           letter-spacing: -0.02em;
           margin-top: 12px;
         }
@@ -276,8 +276,8 @@ export default function PrivacyPolicy({ onClose }) {
         }
         .policy-section h3 {
           font-family: var(--font-display);
-          font-size: 18px;
-          font-weight: 500;
+          font-size: 19px;
+          font-weight: 600;
           letter-spacing: -0.01em;
           margin-bottom: 12px;
           color: var(--ink);
@@ -364,7 +364,7 @@ export default function PrivacyPolicy({ onClose }) {
 
         @media (max-width: 600px) {
           .policy-header, .policy-body { padding: 24px; }
-          .policy-title { font-size: 26px; }
+          .policy-title { font-size: 27px; }
           .cookie-row { grid-template-columns: 1fr; gap: 4px; }
           .cookie-row-head span:not(:first-child) { display: none; }
         }

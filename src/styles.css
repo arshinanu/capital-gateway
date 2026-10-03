@@ -6,8 +6,8 @@
   --ivory-solid: #111714;
   --paper-solid: #090c0b;
   --ink: #e8f0ec;
-  --ink-2: #b8cdc4;
-  --muted: #7a9e94;
+  --ink-2: #ffffff;
+  --muted: #ffffff;
   --line: #1e2820;
   --forest: rgba(13, 31, 24, 0.78);
   --forest-2: rgba(22, 43, 32, 0.80);
@@ -89,7 +89,7 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 
 .display {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 0.95;
   font-variation-settings: "opsz" 144;

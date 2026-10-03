@@ -155,7 +155,8 @@ export default function Contact() {
           align-items: start;
         }
         .contact-title {
-          font-size: clamp(44px, 6.5vw, 96px);
+          font-size: clamp(45px, calc(6.5vw + 1px), 97px);
+          font-weight: 600;
           margin: 24px 0 32px;
         }
         .contact-lede {
@@ -221,8 +222,8 @@ export default function Contact() {
         }
         .form-head h3 {
           font-family: var(--font-display);
-          font-size: 28px;
-          font-weight: 500;
+          font-size: 29px;
+          font-weight: 600;
           letter-spacing: -0.02em;
         }
         .form-step {
@@ -293,7 +294,8 @@ export default function Contact() {
         }
         .form.success h3 {
           font-family: var(--font-display);
-          font-size: 32px;
+          font-size: 33px;
+          font-weight: 600;
           margin: 24px 0 12px;
           color: var(--ink);
         }

@@ -383,13 +383,15 @@ export default function DocumentUploadPage() {
         .upload-header { margin-bottom: 36px; }
 
         .upload-title {
-          font-size: clamp(32px, 4.5vw, 50px);
+          font-size: clamp(33px, calc(4.5vw + 1px), 51px);
+          font-weight: 600;
           margin: 18px 0 12px;
           line-height: 1.05;
         }
 
         .upload-sub {
-          font-size: 13.5px;
+          font-size: 14.5px;
+          font-weight: 600;
           color: var(--muted);
           line-height: 1.65;
         }
@@ -654,7 +656,7 @@ export default function DocumentUploadPage() {
           margin: 0 auto 24px;
         }
         .confirm-title {
-          font-size: 26px;
+          font-size: 27px;
           font-weight: 600;
           margin-bottom: 14px;
           line-height: 1.15;

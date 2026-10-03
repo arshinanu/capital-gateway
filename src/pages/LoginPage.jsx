@@ -183,13 +183,15 @@ export default function LoginPage() {
         }
 
         .login-title {
-          font-size: clamp(36px, 5vw, 56px);
+          font-size: clamp(37px, calc(5vw + 1px), 57px);
+          font-weight: 600;
           margin: 18px 0 12px;
           line-height: 1.05;
         }
 
         .login-sub {
-          font-size: 14px;
+          font-size: 15px;
+          font-weight: 600;
           color: var(--muted);
           line-height: 1.6;
         }
@@ -311,7 +313,7 @@ export default function LoginPage() {
         }
 
         .confirm-title {
-          font-size: 26px;
+          font-size: 27px;
           font-weight: 600;
           margin-bottom: 14px;
           line-height: 1.15;
