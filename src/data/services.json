@@ -1,0 +1,1470 @@
+{
+  "categories": [
+    {
+      "id": "lending",
+      "icon": "TrendingUp",
+      "tag": "Lending",
+      "title": "Business & SME Loans",
+      "summary": "Flexible funding solutions for businesses of every size — from start-ups to established SMEs.",
+      "items": [
+        {
+          "name": "Merchant Cash Advance",
+          "overview": [
+            "A Merchant Cash Advance (MCA) gives your business access to upfront funding based on its debit and credit card sales. Repayments are linked to future card takings, allowing them to adjust with your sales activity.",
+            "It can suit businesses that regularly accept card payments, including retailers, restaurants, cafés, salons and hospitality businesses."
+          ],
+          "howItWorks": [
+            {
+              "title": "Application and assessment",
+              "text": "The provider reviews your business’s trading history, recent bank statements and card sales to assess eligibility and determine the funding available."
+            },
+            {
+              "title": "Funding offer",
+              "text": "You receive an offer outlining the advance amount, total repayment, applicable fees and the agreed percentage of card sales collected towards repayment."
+            },
+            {
+              "title": "Access to funds",
+              "text": "Once approved and the agreement is completed, the funds are transferred to your business account."
+            },
+            {
+              "title": "Repayment through card sales",
+              "text": "An agreed percentage of your card sales is collected automatically. Repayments increase during busier periods and decrease when sales are quieter, continuing until the agreed total is repaid, subject to the agreement’s terms."
+            }
+          ],
+          "uses": {
+            "intro": "A Merchant Cash Advance can support a range of business needs, including:",
+            "items": [
+              "Purchasing stock and supplies.",
+              "Managing seasonal cash flow.",
+              "Replacing or upgrading equipment.",
+              "Covering unexpected business expenses.",
+              "Supporting expansion and growth."
+            ]
+          },
+          "considerations": [
+            "Although repayments adjust with card sales, each collection reduces the revenue available for everyday business expenses. Before proceeding, review the total repayment amount, fees, collection percentage, any personal guarantee requirements and other contractual conditions.",
+            "The collection percentage is not an interest rate, and faster repayment does not necessarily reduce the agreed funding cost."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore Merchant Cash Advance options and understand the costs and repayment terms, so you can make an informed decision for your business.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Working Capital",
+          "overview": [
+            "Working capital finance helps your business cover its everyday operating costs, such as payroll, supplier payments, rent and utilities. It is designed to bridge the gap between money leaving the business and payments coming in.",
+            "It can suit businesses of all sizes, particularly those with seasonal trading patterns, long payment terms or periods of growth that place pressure on cash flow."
+          ],
+          "howItWorks": [
+            {
+              "title": "Understanding your requirement",
+              "text": "We discuss how much you need, what the funding is for and how your cash flow typically moves through the year."
+            },
+            {
+              "title": "Application and assessment",
+              "text": "The lender reviews your trading history, recent bank statements, management information and credit profile to assess affordability and eligibility."
+            },
+            {
+              "title": "Funding offer",
+              "text": "You receive an offer setting out the facility amount, term, interest rate or fees, repayment schedule and any security or guarantee requirements."
+            },
+            {
+              "title": "Drawdown and repayment",
+              "text": "Once the agreement is completed, the funds are released to your business account and repaid in line with the agreed schedule."
+            }
+          ],
+          "uses": {
+            "intro": "Working capital finance can support a range of day-to-day business needs, including:",
+            "items": [
+              "Paying staff and suppliers on time.",
+              "Managing seasonal dips in income.",
+              "Covering rent, utilities and overheads.",
+              "Taking on new contracts or larger orders.",
+              "Maintaining a cash buffer for unexpected costs."
+            ]
+          },
+          "considerations": [
+            "Working capital finance is best used to support short-term cash flow rather than to fund long-term losses. Before proceeding, review the total cost of borrowing, the repayment schedule and how repayments will fit around your business’s regular income.",
+            "Some facilities may require a personal guarantee from directors or security over business assets."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you identify working capital options that suit your trading pattern and explain the costs and terms involved, so you can choose with confidence.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Business Loan",
+          "overview": [
+            "A business loan provides a fixed sum of money that is repaid over an agreed term, typically in regular monthly instalments. Terms commonly range from one to ten years, depending on the lender and the purpose of the loan.",
+            "Business loans can be secured or unsecured and are available to businesses at different stages, from newer companies to established SMEs."
+          ],
+          "howItWorks": [
+            {
+              "title": "Defining the purpose",
+              "text": "We discuss the amount you need, the purpose of the loan and the repayment term that would suit your business."
+            },
+            {
+              "title": "Application and assessment",
+              "text": "The lender reviews your accounts, bank statements, trading history and credit profile to assess affordability."
+            },
+            {
+              "title": "Loan offer",
+              "text": "You receive an offer outlining the loan amount, term, interest rate, fees, total amount repayable and any security or guarantee requirements."
+            },
+            {
+              "title": "Funds and repayment",
+              "text": "Once the agreement is signed, the funds are paid to your business account and repaid through fixed instalments over the agreed term."
+            }
+          ],
+          "uses": {
+            "intro": "A business loan can support a range of business needs, including:",
+            "items": [
+              "Expanding into new premises or markets.",
+              "Investing in marketing and sales.",
+              "Purchasing equipment or technology.",
+              "Hiring and training staff.",
+              "Refinancing existing business debt."
+            ]
+          },
+          "considerations": [
+            "Fixed repayments give certainty, but they must be met regardless of how the business is trading. Before proceeding, review the interest rate, arrangement fees, early repayment charges and the total amount repayable.",
+            "Unsecured business loans often require a personal guarantee from directors. Secured loans place a charge over business or personal assets."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you compare business loan options and understand the full cost and terms, so you can make an informed decision for your business.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Asset Finance",
+          "overview": [
+            "Asset finance allows your business to acquire equipment, vehicles or machinery without paying the full cost upfront. Instead, the cost is spread over an agreed period through regular payments.",
+            "It can suit businesses in sectors such as construction, manufacturing, transport, agriculture, healthcare and hospitality that rely on physical assets to operate."
+          ],
+          "howItWorks": [
+            {
+              "title": "Choosing the asset",
+              "text": "You identify the equipment or vehicle you need and obtain a quote from the supplier, whether new or used."
+            },
+            {
+              "title": "Selecting the structure",
+              "text": "We explain the available options, such as hire purchase, finance lease or operating lease, and how each affects ownership and accounting."
+            },
+            {
+              "title": "Application and assessment",
+              "text": "The lender reviews your business’s financial position and the asset itself before issuing an offer setting out the payments, term and fees."
+            },
+            {
+              "title": "Delivery and repayment",
+              "text": "Once the agreement is completed, the lender pays the supplier, the asset is delivered to your business and you make the agreed regular payments."
+            }
+          ],
+          "uses": {
+            "intro": "Asset finance can be used to acquire a wide range of business assets, including:",
+            "items": [
+              "Commercial vehicles and fleets.",
+              "Plant and construction machinery.",
+              "Manufacturing and production equipment.",
+              "IT, technology and office equipment.",
+              "Catering, medical and specialist equipment."
+            ]
+          },
+          "considerations": [
+            "With some agreements, such as leases, you may not own the asset at the end of the term. Before proceeding, review the total amount payable, any balloon or final payments, end-of-term options and the responsibilities for maintenance and insurance.",
+            "The asset usually acts as security for the finance and may be repossessed if payments are not maintained."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore asset finance structures and understand the costs, ownership position and terms of each, so you can choose the option that suits your business.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Invoice Finance",
+          "overview": [
+            "Invoice finance allows your business to release cash tied up in unpaid invoices. Rather than waiting for customers to pay on their agreed terms, you can receive an advance against the value of your outstanding invoices.",
+            "It can suit businesses that sell to other businesses on credit terms, such as manufacturers, wholesalers, recruitment agencies and professional services firms."
+          ],
+          "howItWorks": [
+            {
+              "title": "Raising invoices",
+              "text": "You continue to invoice your customers as normal for goods or services delivered."
+            },
+            {
+              "title": "Receiving an advance",
+              "text": "The provider advances an agreed percentage of the invoice value, often up to around 90%, depending on the provider and your sales ledger."
+            },
+            {
+              "title": "Customer payment",
+              "text": "Your customer pays the invoice in line with its terms. Depending on the facility, payment may go to the provider or to a trust account."
+            },
+            {
+              "title": "Receiving the balance",
+              "text": "Once the invoice is paid, the remaining balance is released to you, less the provider’s fees and charges."
+            }
+          ],
+          "uses": {
+            "intro": "Invoice finance can support a range of business needs, including:",
+            "items": [
+              "Smoothing cash flow between invoicing and payment.",
+              "Paying suppliers and staff on time.",
+              "Taking on larger orders or new customers.",
+              "Supporting growth without fixed-term borrowing.",
+              "Reducing reliance on an overdraft."
+            ]
+          },
+          "considerations": [
+            "Invoice finance costs typically include a service fee and a discount charge, and the facility may have a minimum term or notice period. Before proceeding, review all fees, the advance rate, any concentration limits and whether the facility is confidential or disclosed to your customers.",
+            "Under recourse facilities, your business remains responsible if a customer does not pay."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore invoice finance options and understand how the fees, advance rates and terms work, so you can make an informed decision for your business.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Factoring",
+          "overview": [
+            "Factoring is a form of invoice finance in which the provider advances funds against your unpaid invoices and also manages your sales ledger and credit control. The provider collects payments directly from your customers on your behalf.",
+            "It can suit businesses that want to release cash from invoices while outsourcing the time and resource involved in chasing payments."
+          ],
+          "howItWorks": [
+            {
+              "title": "Setting up the facility",
+              "text": "The provider reviews your sales ledger, customer base and trading history to agree the advance rate, fees and terms."
+            },
+            {
+              "title": "Advance against invoices",
+              "text": "When you raise an invoice, the provider advances an agreed percentage of its value to your business."
+            },
+            {
+              "title": "Credit control and collection",
+              "text": "The provider manages your sales ledger, sends statements and collects payment from your customers."
+            },
+            {
+              "title": "Balance released",
+              "text": "Once your customer pays, the remaining balance is paid to you, less the provider’s fees and charges."
+            }
+          ],
+          "uses": {
+            "intro": "Factoring can support a range of business needs, including:",
+            "items": [
+              "Improving cash flow from credit sales.",
+              "Reducing time spent on credit control.",
+              "Supporting growth without adding back-office staff.",
+              "Managing a large or growing customer base.",
+              "Funding day-to-day operating costs."
+            ]
+          },
+          "considerations": [
+            "With factoring, your customers will usually be aware that a third party is managing collections, which may affect your customer relationships. Before proceeding, review the service fee, discount charge, minimum term, notice period and how the provider will communicate with your customers.",
+            "Under recourse factoring, your business remains responsible for any invoices that are not paid."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you compare factoring and other invoice finance options and understand the costs and terms, so you can choose the right approach for your business.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Funding for Stock",
+          "overview": [
+            "Stock finance helps your business purchase inventory without tying up its own cash. The lender funds the purchase of stock, and you repay the facility as the goods are sold.",
+            "It can suit retailers, wholesalers, distributors, manufacturers and importers, particularly those buying in bulk or ahead of seasonal demand."
+          ],
+          "howItWorks": [
+            {
+              "title": "Assessing your requirement",
+              "text": "We discuss the stock you need to buy, your suppliers, typical order values and how quickly your stock sells."
+            },
+            {
+              "title": "Application and assessment",
+              "text": "The lender reviews your trading history, stock turnover and financial position to agree a facility limit and terms."
+            },
+            {
+              "title": "Supplier payment",
+              "text": "When you place an order, the lender pays your supplier directly, in the UK or overseas, depending on the facility."
+            },
+            {
+              "title": "Repayment as stock sells",
+              "text": "You repay the lender over an agreed period, typically as the stock is sold, and the facility can then be reused for further purchases."
+            }
+          ],
+          "uses": {
+            "intro": "Stock finance can support a range of business needs, including:",
+            "items": [
+              "Buying stock ahead of peak seasons.",
+              "Taking advantage of bulk purchase discounts.",
+              "Fulfilling large customer orders.",
+              "Paying overseas suppliers.",
+              "Expanding product ranges."
+            ]
+          },
+          "considerations": [
+            "If stock sells more slowly than expected, repayments may still fall due before the income is received. Before proceeding, review the fees, repayment period, any minimum usage requirements and what happens if stock remains unsold.",
+            "Lenders may take security over the stock or require a personal guarantee."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore stock finance options and understand the costs and repayment terms, so you can make an informed decision for your business.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Overdraft / Revolving Credit",
+          "overview": [
+            "A revolving credit facility gives your business access to a pre-agreed credit limit that you can draw from, repay and draw from again as needed. It works in a similar way to a business overdraft.",
+            "Interest is typically charged only on the amount drawn, not on the full limit, making it a flexible way to manage short-term cash flow needs."
+          ],
+          "howItWorks": [
+            {
+              "title": "Application and assessment",
+              "text": "The lender reviews your trading history, bank statements and credit profile to determine an appropriate credit limit."
+            },
+            {
+              "title": "Facility agreed",
+              "text": "You receive an offer setting out the credit limit, interest rate, any fees and the facility’s review or renewal date."
+            },
+            {
+              "title": "Drawing funds",
+              "text": "You draw funds from the facility when needed, up to the agreed limit."
+            },
+            {
+              "title": "Repaying and reusing",
+              "text": "As you repay what you have drawn, those funds become available to use again for the life of the facility."
+            }
+          ],
+          "uses": {
+            "intro": "A revolving credit facility can support a range of business needs, including:",
+            "items": [
+              "Covering short-term cash flow gaps.",
+              "Managing irregular or seasonal income.",
+              "Paying suppliers while awaiting customer payments.",
+              "Meeting unexpected costs.",
+              "Acting on short-term opportunities."
+            ]
+          },
+          "considerations": [
+            "Revolving facilities are designed for short-term, fluctuating needs rather than long-term borrowing. Before proceeding, review the interest rate, arrangement and non-utilisation fees, and whether the lender can reduce or withdraw the limit at review.",
+            "Some facilities require a personal guarantee or security."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore revolving credit options and understand how the costs and terms work, so you can make an informed decision for your business.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Buying / Acquisition of Business",
+          "overview": [
+            "Acquisition finance helps you fund the purchase of all or part of an existing business. This may include a trade sale, a management buy-out, a management buy-in or the purchase of shares.",
+            "Funding is usually assessed on the target business’s cash flow, profitability and assets, as well as the experience of the buyer."
+          ],
+          "howItWorks": [
+            {
+              "title": "Reviewing the deal",
+              "text": "We review the proposed purchase, including the price, deal structure, target business’s accounts and your own contribution."
+            },
+            {
+              "title": "Structuring the funding",
+              "text": "We help shape a funding structure, which may combine term lending, asset-backed finance, invoice finance, deferred consideration or vendor loans."
+            },
+            {
+              "title": "Lender assessment",
+              "text": "The lender carries out due diligence on the target business and the buyer before issuing an offer setting out the terms and any security required."
+            },
+            {
+              "title": "Completion",
+              "text": "Once legal and due diligence work is complete, the funds are released at completion of the acquisition."
+            }
+          ],
+          "uses": {
+            "intro": "Acquisition finance can support a range of transactions, including:",
+            "items": [
+              "Buying a competitor or complementary business.",
+              "Management buy-outs and buy-ins.",
+              "Purchasing a retiring owner’s business.",
+              "Acquiring shares from existing shareholders.",
+              "Funding part of the purchase price alongside your own deposit."
+            ]
+          },
+          "considerations": [
+            "Acquisition funding is usually repaid from the future profits of the business being acquired, so realistic forecasts are important. Before proceeding, review the total cost of borrowing, covenants, security requirements and any personal guarantees.",
+            "You should also take independent legal, tax and accounting advice on the transaction."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore acquisition finance options and understand how different funding structures and terms could work for your deal.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Retail Furniture Finance",
+          "overview": [
+            "Retail furniture finance allows furniture and homeware retailers to offer customers the option to spread the cost of their purchase. The customer applies for finance at the point of sale and the retailer is paid by the finance provider.",
+            "It can suit retailers selling higher-value items such as sofas, beds, kitchens and furniture sets, both in store and online."
+          ],
+          "howItWorks": [
+            {
+              "title": "Retailer approval",
+              "text": "Your business applies to a finance provider to offer point-of-sale finance and agrees the products, terms and commission structure."
+            },
+            {
+              "title": "Customer application",
+              "text": "Your customer chooses to pay by finance and completes an application, which the provider assesses."
+            },
+            {
+              "title": "Retailer payment",
+              "text": "Once the customer’s agreement is approved and signed, the provider pays your business for the goods, less any agreed fees."
+            },
+            {
+              "title": "Customer repayment",
+              "text": "The customer repays the finance provider directly under their own credit agreement."
+            }
+          ],
+          "uses": {
+            "title": "How Can It Support Your Business?",
+            "intro": "Offering customer finance can help your business to:",
+            "items": [
+              "Give customers more ways to pay.",
+              "Make higher-value items more accessible.",
+              "Support larger basket sizes.",
+              "Compete with retailers already offering finance.",
+              "Receive payment for goods from the provider."
+            ]
+          },
+          "considerations": [
+            "Offering consumer credit to customers is a regulated activity. Your business may need its own authorisation or to act as an appointed representative, and must follow the rules on how finance is promoted to customers.",
+            "Before proceeding, review the provider’s fees, the subsidy cost of any interest-free offers and your obligations as a retailer."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore retail finance options and understand the costs and requirements involved, so you can make an informed decision for your business.",
+            "Contact our team to discuss your requirements."
+          ],
+          "note": "Facilities are subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Loans Against Assets",
+          "overview": [
+            "A loan against assets allows your business to raise funds using assets it already owns as security. These may include plant and machinery, commercial vehicles or property.",
+            "It can suit asset-rich businesses that need to release capital for growth, refinancing or cash flow."
+          ],
+          "howItWorks": [
+            {
+              "title": "Identifying the assets",
+              "text": "We discuss the assets your business owns, their condition and whether they are already subject to finance."
+            },
+            {
+              "title": "Valuation",
+              "text": "The lender arranges a valuation of the assets to determine how much can be borrowed against them."
+            },
+            {
+              "title": "Loan offer",
+              "text": "You receive an offer setting out the loan amount, term, interest rate, fees and the security to be taken."
+            },
+            {
+              "title": "Funds and repayment",
+              "text": "Once the agreement and security are completed, the funds are released to your business and repaid over the agreed term."
+            }
+          ],
+          "uses": {
+            "intro": "Funds raised against business assets can support a range of needs, including:",
+            "items": [
+              "Releasing working capital.",
+              "Refinancing existing borrowing.",
+              "Funding expansion or new contracts.",
+              "Purchasing further equipment.",
+              "Supporting a business restructure."
+            ]
+          },
+          "considerations": [
+            "The assets used as security may be repossessed if repayments are not maintained. Before proceeding, review the loan amount relative to the asset value, the total cost of borrowing, valuation and legal fees, and any early repayment charges.",
+            "Some lenders may also require a personal guarantee."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore asset-backed lending options and understand the costs and terms, so you can make an informed decision for your business.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        }
+      ]
+    },
+    {
+      "id": "bridging",
+      "icon": "Building2",
+      "tag": "Bridging",
+      "title": "Bridging – Commercial and Residential",
+      "summary": "Short-term bridging finance for time-critical commercial and residential transactions and property purchases.",
+      "items": [
+        {
+          "name": "Quick Bridge (24/48 hr)",
+          "overview": [
+            "A quick bridge is a short-term loan secured against property, arranged for transactions where time is limited. It is often used when a purchase needs to complete before longer-term finance can be put in place.",
+            "Timescales depend on the lender, valuation, legal work and the information available, so a quick completion cannot be guaranteed in every case."
+          ],
+          "howItWorks": [
+            {
+              "title": "Initial discussion",
+              "text": "We discuss the property, the amount required, your deadline and how you plan to repay the loan."
+            },
+            {
+              "title": "Lender terms",
+              "text": "The lender reviews the deal and issues terms, which may be based on a desktop or full valuation depending on the property and loan size."
+            },
+            {
+              "title": "Legal work",
+              "text": "Solicitors for you and the lender complete the legal work and security documentation."
+            },
+            {
+              "title": "Completion and exit",
+              "text": "Funds are released at completion and the loan is repaid through your agreed exit, such as a sale or refinance."
+            }
+          ],
+          "uses": {
+            "intro": "A quick bridge can support a range of time-sensitive situations, including:",
+            "items": [
+              "Completing a purchase when a chain breaks.",
+              "Meeting a short exchange or completion deadline.",
+              "Acting on a below-market-value opportunity.",
+              "Settling an urgent liability secured on property.",
+              "Preventing a transaction from falling through."
+            ]
+          },
+          "considerations": [
+            "Bridging finance is usually more expensive than longer-term borrowing, and costs can include arrangement, valuation, legal and exit fees. Before proceeding, review the total cost and make sure you have a realistic exit strategy within the loan term.",
+            "Faster arrangement may limit the time available to review terms, so it is important to understand the agreement fully before signing."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore bridging options for time-sensitive transactions and understand the costs and terms involved, so you can make an informed decision.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Standard Auction Bridge Loan",
+          "overview": [
+            "An auction bridge loan helps you fund the purchase of a property bought at auction. Most auctions require completion within a fixed period, commonly 28 days, which can be too short for a standard mortgage.",
+            "It can suit property investors, developers and buyers purchasing properties at auction."
+          ],
+          "howItWorks": [
+            {
+              "title": "Before the auction",
+              "text": "Ideally, we discuss the lot, your budget and your exit plan before the auction, so that lender terms can be explored in advance."
+            },
+            {
+              "title": "Winning the bid",
+              "text": "Once your bid is successful, you pay the deposit and the lender progresses the valuation and legal work."
+            },
+            {
+              "title": "Completion",
+              "text": "The loan funds are released to complete the purchase within the auction deadline, subject to the lender’s process."
+            },
+            {
+              "title": "Exit",
+              "text": "The loan is repaid through sale of the property or refinancing onto a longer-term mortgage."
+            }
+          ],
+          "uses": {
+            "intro": "An auction bridge loan can support a range of purchases, including:",
+            "items": [
+              "Residential properties bought at auction.",
+              "Commercial and mixed-use lots.",
+              "Properties needing refurbishment.",
+              "Properties that are not yet mortgageable.",
+              "Land and development sites."
+            ]
+          },
+          "considerations": [
+            "If finance is not in place by the auction completion date, you may lose your deposit and face further costs. Before bidding, review the legal pack, the total cost of borrowing and your exit strategy.",
+            "Bridging costs typically include interest, arrangement, valuation, legal and possibly exit fees."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore auction finance options before and after the auction and explain the costs and terms involved, so you can bid with a clearer understanding.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Residential Bridge Loan",
+          "overview": [
+            "A residential bridge loan provides short-term finance secured against residential property, typically for a term of between 1 and 24 months.",
+            "It is commonly used by investors and buyers who need to complete a purchase before longer-term finance or the sale of another property is in place."
+          ],
+          "howItWorks": [
+            {
+              "title": "Initial discussion",
+              "text": "We discuss the property, the amount required, the term and how you intend to repay the loan."
+            },
+            {
+              "title": "Valuation and assessment",
+              "text": "The lender values the property and reviews your exit strategy and circumstances before issuing an offer."
+            },
+            {
+              "title": "Completion",
+              "text": "Once legal work is complete, the funds are released. Interest may be paid monthly, retained from the loan or added to the balance."
+            },
+            {
+              "title": "Exit",
+              "text": "The loan is repaid in full at the end of the term, usually through a sale or refinance."
+            }
+          ],
+          "uses": {
+            "intro": "A residential bridge loan can support a range of situations, including:",
+            "items": [
+              "Buying a property before selling another.",
+              "Purchasing a property that needs work before it can be mortgaged.",
+              "Breaking a property chain.",
+              "Raising short-term funds against an existing property.",
+              "Purchasing investment property."
+            ]
+          },
+          "considerations": [
+            "If the property is, or will be, occupied by you or a close family member, the loan is likely to be regulated and additional protections apply. Before proceeding, review the total cost of borrowing, all fees and the strength of your exit strategy.",
+            "If your exit is delayed, you may face additional interest and charges."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore residential bridging options and understand the costs and terms involved, so you can make an informed decision.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Commercial Bridge Loan",
+          "overview": [
+            "A commercial bridge loan is short-term finance secured against commercial or mixed-use property. It is used to fund time-sensitive property transactions while a longer-term solution is arranged.",
+            "It can suit businesses, investors and developers acquiring, refinancing or repositioning commercial property."
+          ],
+          "howItWorks": [
+            {
+              "title": "Initial discussion",
+              "text": "We discuss the property, its current use and income, the amount required and your exit plan."
+            },
+            {
+              "title": "Valuation and assessment",
+              "text": "The lender values the property and assesses the borrower and exit strategy before issuing terms."
+            },
+            {
+              "title": "Completion",
+              "text": "Once legal work and security are completed, the funds are released for the purchase or refinance."
+            },
+            {
+              "title": "Exit",
+              "text": "The loan is repaid at the end of the term, typically through a sale or a commercial mortgage."
+            }
+          ],
+          "uses": {
+            "intro": "A commercial bridge loan can support a range of situations, including:",
+            "items": [
+              "Acquiring business premises.",
+              "Purchasing commercial investment property.",
+              "Releasing equity from commercial property.",
+              "Funding a change of use or lease restructure.",
+              "Bridging to a longer-term commercial mortgage."
+            ]
+          },
+          "considerations": [
+            "Commercial bridging is usually more expensive than long-term borrowing. Before proceeding, review the interest rate, arrangement, valuation, legal and exit fees, and make sure your exit strategy is realistic within the term.",
+            "Lenders may require personal guarantees from directors or shareholders."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore commercial bridging options and understand the costs and terms involved, so you can make an informed decision.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Regulated Bridge Loan",
+          "overview": [
+            "A regulated bridge loan is a short-term loan secured against a property that is, or will be, occupied by the borrower or a close family member. Because it is secured on a home, it is regulated by the Financial Conduct Authority and carries consumer protections.",
+            "It is commonly used by homeowners who want to buy a new home before their current home has sold."
+          ],
+          "howItWorks": [
+            {
+              "title": "Initial discussion",
+              "text": "Your circumstances, the properties involved and your plan for repaying the loan are reviewed."
+            },
+            {
+              "title": "Advice and affordability",
+              "text": "The lender assesses affordability and your repayment strategy, and you receive the required information about the loan’s costs and features."
+            },
+            {
+              "title": "Offer and reflection",
+              "text": "You receive a formal offer, with time to consider it before you are committed."
+            },
+            {
+              "title": "Completion and exit",
+              "text": "Funds are released at completion and the loan is repaid, typically through the sale of your existing home or a mortgage."
+            }
+          ],
+          "uses": {
+            "intro": "A regulated bridge loan can support situations such as:",
+            "items": [
+              "Buying a new home before selling your current one.",
+              "Breaking a property chain.",
+              "Downsizing or relocating.",
+              "Purchasing a home that is not yet mortgageable.",
+              "Funding works on your home before refinancing."
+            ]
+          },
+          "considerations": [
+            "Regulated bridging is usually more expensive than a standard residential mortgage, and costs can increase if the sale of your existing property is delayed. Before proceeding, review the total cost, all fees and what would happen if your exit takes longer than expected.",
+            "Regulated mortgage and bridging advice must be provided by a firm with the appropriate permissions. Where needed, we can introduce you to a suitably authorised adviser."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you understand how regulated bridging works and, where appropriate, connect you with a suitably authorised specialist.",
+            "Contact our team to discuss your requirements."
+          ],
+          "riskWarning": "Your home may be repossessed if you do not keep up repayments on a mortgage or any other debt secured on it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Unregulated Bridge Loan",
+          "overview": [
+            "An unregulated bridge loan is short-term finance secured against property that will not be occupied by the borrower or their close family. It is typically used for investment, buy-to-let, commercial or development purposes.",
+            "It can suit property investors, developers, landlords and borrowers acting through limited companies."
+          ],
+          "howItWorks": [
+            {
+              "title": "Initial discussion",
+              "text": "We discuss the property, the purpose of the loan, the amount required and your exit strategy."
+            },
+            {
+              "title": "Valuation and assessment",
+              "text": "The lender values the property and reviews your experience, circumstances and exit plan."
+            },
+            {
+              "title": "Completion",
+              "text": "Once legal work is complete, the funds are released for the purchase, refinance or works."
+            },
+            {
+              "title": "Exit",
+              "text": "The loan is repaid at the end of the term, typically through a sale or a refinance onto a longer-term product."
+            }
+          ],
+          "uses": {
+            "intro": "An unregulated bridge loan can support a range of purposes, including:",
+            "items": [
+              "Purchasing investment or buy-to-let property.",
+              "Buying properties needing refurbishment.",
+              "Raising capital against existing investment property.",
+              "Funding commercial and mixed-use purchases.",
+              "Short-term business funding secured on property."
+            ]
+          },
+          "considerations": [
+            "Unregulated bridging does not carry the same consumer protections as regulated lending. Before proceeding, review the total cost of borrowing, all fees, any default charges and the strength of your exit strategy.",
+            "Lenders may require personal guarantees where borrowing is through a company."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore unregulated bridging options and understand the costs and terms involved, so you can make an informed decision.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Refurbishment Loan",
+          "overview": [
+            "A refurbishment loan is short-term finance used to purchase and improve a property before it is sold or refinanced. Lenders may consider both the current value and the expected value once works are complete.",
+            "Light refurbishment covers cosmetic works such as kitchens, bathrooms and decoration. Heavy refurbishment covers structural works, extensions and conversions."
+          ],
+          "howItWorks": [
+            {
+              "title": "Reviewing the project",
+              "text": "We discuss the property, the planned works, the costs and your intended exit."
+            },
+            {
+              "title": "Valuation and assessment",
+              "text": "The lender values the property as it is and as it will be after the works, and reviews your schedule of works and experience."
+            },
+            {
+              "title": "Funding the works",
+              "text": "Funds for the purchase are released at completion. Funds for the works may be released upfront or in stages as the works progress."
+            },
+            {
+              "title": "Exit",
+              "text": "Once the works are complete, the loan is repaid through a sale or a refinance based on the improved value."
+            }
+          ],
+          "uses": {
+            "intro": "A refurbishment loan can support a range of projects, including:",
+            "items": [
+              "Modernising kitchens and bathrooms.",
+              "Bringing an uninhabitable property up to standard.",
+              "Extensions and loft conversions.",
+              "Converting a house into flats or HMO.",
+              "Change-of-use projects."
+            ]
+          },
+          "considerations": [
+            "Delays and cost overruns are common in refurbishment projects and can affect your exit. Before proceeding, review the total cost of borrowing, how and when funds for works are released, and allow a contingency for unexpected costs.",
+            "Some works may require planning permission or building regulations approval."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore refurbishment finance options and understand the costs and terms involved, so you can plan your project with confidence.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Bridge to Let",
+          "overview": [
+            "A bridge-to-let product combines a short-term bridging loan with a planned move onto a buy-to-let mortgage, often with the same lender. It allows you to buy and improve a property before refinancing it for letting.",
+            "It can suit landlords and investors purchasing properties that are not mortgageable in their current condition."
+          ],
+          "howItWorks": [
+            {
+              "title": "Purchase",
+              "text": "The bridging loan funds the purchase of the property, and in some cases the cost of works."
+            },
+            {
+              "title": "Improvement",
+              "text": "You carry out any necessary works to bring the property to a lettable standard."
+            },
+            {
+              "title": "Letting",
+              "text": "Once works are complete, the property is let to tenants."
+            },
+            {
+              "title": "Refinance",
+              "text": "The bridging loan is refinanced onto a buy-to-let mortgage, subject to the lender’s criteria and valuation at that time."
+            }
+          ],
+          "uses": {
+            "intro": "Bridge-to-let finance can support a range of investments, including:",
+            "items": [
+              "Buying properties that need refurbishment.",
+              "Auction purchases intended for letting.",
+              "Converting properties into HMOs or flats.",
+              "Building a buy-to-let portfolio.",
+              "Refinancing at the improved property value."
+            ]
+          },
+          "considerations": [
+            "The move onto a buy-to-let mortgage is usually subject to valuation, rental income and lending criteria at the time, so it may not be guaranteed. Before proceeding, review the costs of both stages and any fees for switching.",
+            "Buy-to-let mortgages through a limited company or for business purposes are not usually regulated."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore bridge-to-let options and understand the costs and terms at each stage, so you can plan your investment with confidence.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Development Exit Finance",
+          "overview": [
+            "Development exit finance is a short-term loan used to repay a development facility once building works are complete or close to completion. It gives developers more time to sell or let the finished units.",
+            "It can suit developers whose construction loan is nearing the end of its term, or who want to reduce their borrowing costs while units are marketed."
+          ],
+          "howItWorks": [
+            {
+              "title": "Reviewing the scheme",
+              "text": "We review the completed development, the outstanding debt, the sales or letting position and the timescale required."
+            },
+            {
+              "title": "Valuation",
+              "text": "The lender values the completed units, typically based on the gross development value."
+            },
+            {
+              "title": "Refinance",
+              "text": "The exit loan repays the existing development facility at completion."
+            },
+            {
+              "title": "Sales or refinance",
+              "text": "The loan is repaid as units are sold or through refinancing onto longer-term borrowing."
+            }
+          ],
+          "uses": {
+            "intro": "Development exit finance can support a range of needs, including:",
+            "items": [
+              "Repaying a development facility nearing its term.",
+              "Allowing more time to sell units.",
+              "Releasing equity for your next project.",
+              "Holding units for letting.",
+              "Avoiding default interest on an existing facility."
+            ]
+          },
+          "considerations": [
+            "Development exit finance relies on units selling or being refinanced within the term. Before proceeding, review the total cost of borrowing, any minimum interest periods, release fees per unit and the local sales market.",
+            "Lenders may require personal guarantees."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore development exit options and understand the costs and terms involved, so you can make an informed decision for your scheme.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Re-Bridge / Safe Exit",
+          "overview": [
+            "A re-bridge replaces an existing bridging loan with a new short-term facility. It is used when your original exit, such as a sale or refinance, has been delayed and your current loan is approaching or past its term.",
+            "It can provide additional time to complete your exit while reducing the risk of default charges from your existing lender."
+          ],
+          "howItWorks": [
+            {
+              "title": "Reviewing your position",
+              "text": "We review your current loan, the redemption figure, the reasons for the delay and your revised exit plan."
+            },
+            {
+              "title": "Valuation and assessment",
+              "text": "A new lender values the property and assesses whether the revised exit is realistic."
+            },
+            {
+              "title": "Refinance",
+              "text": "The new loan repays your existing bridging lender in full."
+            },
+            {
+              "title": "Exit",
+              "text": "The new loan is repaid through your sale or refinance within the new term."
+            }
+          ],
+          "uses": {
+            "intro": "A re-bridge can help in situations such as:",
+            "items": [
+              "A property sale taking longer than expected.",
+              "A delayed refinance or mortgage application.",
+              "Planning or building works overrunning.",
+              "An existing loan approaching its expiry date.",
+              "Moving away from default interest charges."
+            ]
+          },
+          "considerations": [
+            "Refinancing adds new arrangement, valuation and legal fees, and the total borrowing may increase if interest has been rolled up. Before proceeding, review the overall cost and be confident the revised exit is achievable.",
+            "Not every case can be refinanced, particularly where the loan balance is high relative to the property value."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you review your position, explore re-bridging options and understand the costs and terms involved.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        }
+      ]
+    },
+    {
+      "id": "development",
+      "icon": "Layers",
+      "tag": "Development",
+      "title": "Development Finance – Commercial and Residential",
+      "summary": "Structured finance for ground-up commercial and residential builds, conversions, and large-scale refurbishment projects.",
+      "items": [
+        {
+          "name": "Purchase Land With or Without Planning",
+          "overview": [
+            "Land finance helps you purchase a site for development, whether it has full planning permission, outline consent or no planning at all.",
+            "The amount a lender will provide depends largely on the planning position, the site’s location and potential, and your experience."
+          ],
+          "howItWorks": [
+            {
+              "title": "Reviewing the site",
+              "text": "We discuss the site, its planning status, the purchase price and your plans for development."
+            },
+            {
+              "title": "Valuation and assessment",
+              "text": "The lender values the land, taking into account its current planning position, and reviews your experience and strategy."
+            },
+            {
+              "title": "Completion",
+              "text": "Once legal work is complete, the funds are released to purchase the site."
+            },
+            {
+              "title": "Exit",
+              "text": "The loan is typically repaid by refinancing onto development finance once planning is secured, or through a sale of the site."
+            }
+          ],
+          "uses": {
+            "intro": "Land finance can support a range of purposes, including:",
+            "items": [
+              "Purchasing sites with full planning permission.",
+              "Buying land with outline consent.",
+              "Acquiring land to pursue a planning application.",
+              "Securing a site before build funding is arranged.",
+              "Refinancing land already owned."
+            ]
+          },
+          "considerations": [
+            "Land without planning permission carries more risk, and lenders typically lend a lower proportion of its value. Before proceeding, review the total cost of borrowing, the term, and what would happen if planning is delayed or refused.",
+            "Lenders may require a personal guarantee and a clear exit strategy."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore land finance options and understand the costs and terms involved, so you can make an informed decision.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Development Exit Finance",
+          "overview": [
+            "Development exit finance is a short-term loan used to repay a development facility once building works are complete or close to completion. It gives developers more time to sell or let the finished units.",
+            "It can suit developers whose construction loan is nearing the end of its term, or who want to reduce their borrowing costs while units are marketed."
+          ],
+          "howItWorks": [
+            {
+              "title": "Reviewing the scheme",
+              "text": "We review the completed development, the outstanding debt, the sales or letting position and the timescale required."
+            },
+            {
+              "title": "Valuation",
+              "text": "The lender values the completed units, typically based on the gross development value."
+            },
+            {
+              "title": "Refinance",
+              "text": "The exit loan repays the existing development facility at completion."
+            },
+            {
+              "title": "Sales or refinance",
+              "text": "The loan is repaid as units are sold or through refinancing onto longer-term borrowing."
+            }
+          ],
+          "uses": {
+            "intro": "Development exit finance can support a range of needs, including:",
+            "items": [
+              "Repaying a development facility nearing its term.",
+              "Allowing more time to sell units.",
+              "Releasing equity for your next project.",
+              "Holding units for letting.",
+              "Avoiding default interest on an existing facility."
+            ]
+          },
+          "considerations": [
+            "Development exit finance relies on units selling or being refinanced within the term. Before proceeding, review the total cost of borrowing, any minimum interest periods, release fees per unit and the local sales market.",
+            "Lenders may require personal guarantees."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore development exit options and understand the costs and terms involved, so you can make an informed decision for your scheme.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "First Time Developer Finance",
+          "overview": [
+            "First-time developer finance is development funding for borrowers without an established track record of completing schemes. Some lenders will consider new developers based on the strength of the project, the site and the professional team involved.",
+            "It can suit property investors moving into development, tradespeople taking on their own schemes, and individuals or companies starting their first project."
+          ],
+          "howItWorks": [
+            {
+              "title": "Reviewing the project",
+              "text": "We review your scheme, including the site, planning, build costs, appraisal and the professional team you will work with."
+            },
+            {
+              "title": "Lender assessment",
+              "text": "The lender assesses the viability of the scheme, your contribution and the experience of your contractor and consultants."
+            },
+            {
+              "title": "Staged funding",
+              "text": "Funds are typically released in stages as the build progresses, following inspections by the lender’s monitoring surveyor."
+            },
+            {
+              "title": "Exit",
+              "text": "The loan is repaid through the sale of the completed units or refinancing onto longer-term borrowing."
+            }
+          ],
+          "uses": {
+            "intro": "First-time developer finance can support projects such as:",
+            "items": [
+              "Small ground-up residential schemes.",
+              "Conversions of commercial buildings to residential.",
+              "Building one or more new homes.",
+              "Splitting a house into flats.",
+              "Heavy refurbishment projects."
+            ]
+          },
+          "considerations": [
+            "Lenders may lend a lower proportion of costs to first-time developers and may expect a larger personal contribution. Before proceeding, review the total cost of borrowing, the drawdown process, contingency allowances and what would happen if costs or timescales overrun.",
+            "Lenders usually require a personal guarantee and an experienced professional team."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help first-time developers explore funding options, prepare their proposals and understand the costs and terms involved.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Experienced Developer Finance",
+          "overview": [
+            "Experienced developer finance is development funding for borrowers with a track record of completing schemes. Lenders may take a developer’s history into account when setting loan amounts, pricing and terms.",
+            "It can suit established developers, house builders and property companies undertaking residential, commercial or mixed-use schemes."
+          ],
+          "howItWorks": [
+            {
+              "title": "Reviewing the scheme",
+              "text": "We review your project appraisal, planning position, build costs, programme and track record."
+            },
+            {
+              "title": "Structuring the facility",
+              "text": "We help structure the funding, which may include senior debt, stretched senior or mezzanine finance, depending on the scheme."
+            },
+            {
+              "title": "Staged drawdown",
+              "text": "Build funds are released in stages as works progress, following monitoring surveyor inspections."
+            },
+            {
+              "title": "Exit",
+              "text": "The loan is repaid through unit sales, refinancing or development exit finance."
+            }
+          ],
+          "uses": {
+            "intro": "Experienced developer finance can support projects such as:",
+            "items": [
+              "Ground-up residential developments.",
+              "Commercial and mixed-use schemes.",
+              "Large-scale conversions.",
+              "Multi-site or phased developments.",
+              "Portfolio-level development facilities."
+            ]
+          },
+          "considerations": [
+            "Development finance carries construction, market and timing risks. Before proceeding, review the total cost of borrowing, including arrangement, monitoring and exit fees, along with the facility’s covenants and contingency requirements.",
+            "Lenders typically require personal or corporate guarantees."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you compare development finance options and understand the costs and terms involved, so you can make an informed decision for your scheme.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Refurbishment / Value-Addition Finance",
+          "overview": [
+            "Value-addition finance funds works intended to increase a property’s value or rental income. Projects may range from reconfiguring layouts and adding extensions to full conversions and change-of-use schemes.",
+            "Lenders typically consider the expected value of the property once works are complete, as well as its current value."
+          ],
+          "howItWorks": [
+            {
+              "title": "Reviewing the project",
+              "text": "We discuss the property, the planned works, costs, planning position and your intended exit."
+            },
+            {
+              "title": "Valuation and assessment",
+              "text": "The lender values the property as it is and once works are complete, and reviews the schedule of works and your experience."
+            },
+            {
+              "title": "Staged funding",
+              "text": "Funds for the works are usually released in stages as works progress, following inspections."
+            },
+            {
+              "title": "Exit",
+              "text": "Once the works are complete, the loan is repaid through a sale or refinance based on the improved value."
+            }
+          ],
+          "uses": {
+            "intro": "Value-addition finance can support projects such as:",
+            "items": [
+              "Reconfiguring internal layouts.",
+              "Extensions and additional units.",
+              "Conversions to flats or HMOs.",
+              "Change of use, such as commercial to residential.",
+              "Upgrading property to improve rental income."
+            ]
+          },
+          "considerations": [
+            "The expected value after works is an estimate and may not be achieved. Before proceeding, review the total cost of borrowing, the drawdown process and allow a contingency for delays and cost increases.",
+            "Some works may need planning permission or building regulations approval before funding is released."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore refurbishment and value-addition finance options and understand the costs and terms involved.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        }
+      ]
+    },
+    {
+      "id": "mortgage",
+      "icon": "Landmark",
+      "tag": "Mortgage",
+      "title": "Mortgage – Commercial and Residential",
+      "summary": "Long-term mortgage solutions for commercial, residential, semi-commercial, and investment properties.",
+      "items": [
+        {
+          "name": "Purchase of Commercial Property",
+          "overview": [
+            "A commercial mortgage is a long-term loan used to purchase business premises or commercial investment property, such as offices, shops, warehouses, industrial units and leisure facilities.",
+            "Owner-occupier mortgages are usually assessed on your business’s trading performance, while investment mortgages are assessed mainly on the property’s rental income. Terms commonly range from 5 to 25 years."
+          ],
+          "howItWorks": [
+            {
+              "title": "Initial discussion",
+              "text": "We discuss the property, the purchase price, your deposit and whether you will occupy the property or let it."
+            },
+            {
+              "title": "Application and assessment",
+              "text": "The lender reviews your business accounts or rental income, your credit profile and the property itself."
+            },
+            {
+              "title": "Valuation and offer",
+              "text": "The lender arranges a valuation and issues an offer setting out the loan amount, term, interest rate, fees and conditions."
+            },
+            {
+              "title": "Completion and repayment",
+              "text": "Once legal work is complete, the funds are released to complete the purchase and repaid through monthly instalments over the term."
+            }
+          ],
+          "uses": {
+            "intro": "A commercial mortgage can be used to purchase a range of properties, including:",
+            "items": [
+              "Offices and business premises.",
+              "Retail units and shops.",
+              "Warehouses and industrial units.",
+              "Leisure and hospitality property.",
+              "Commercial investment property."
+            ]
+          },
+          "considerations": [
+            "Commercial mortgages usually require a larger deposit than residential mortgages. Before proceeding, review the interest rate and whether it is fixed or variable, all fees, early repayment charges and any covenants.",
+            "Lenders may require personal guarantees from directors."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore commercial mortgage options and understand the costs and terms involved, so you can make an informed decision.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Purchase of Semi-Commercial Property",
+          "overview": [
+            "A semi-commercial mortgage is used to purchase property that combines commercial and residential use, such as a shop with a flat above. These properties are often referred to as mixed-use.",
+            "Because the income comes from both commercial and residential sources, they are typically financed by specialist lenders."
+          ],
+          "howItWorks": [
+            {
+              "title": "Initial discussion",
+              "text": "We discuss the property, its commercial and residential elements, the purchase price and your deposit."
+            },
+            {
+              "title": "Application and assessment",
+              "text": "The lender reviews the property’s rental income or business performance, along with your experience and credit profile."
+            },
+            {
+              "title": "Valuation and offer",
+              "text": "The lender values the property and issues an offer setting out the loan amount, term, rate and fees."
+            },
+            {
+              "title": "Completion and repayment",
+              "text": "Once legal work is complete, the funds are released and repaid through monthly instalments over the term."
+            }
+          ],
+          "uses": {
+            "intro": "A semi-commercial mortgage can be used for properties such as:",
+            "items": [
+              "Shops with flats above.",
+              "Pubs and restaurants with living accommodation.",
+              "Offices with residential units.",
+              "Mixed-use blocks.",
+              "Mixed-use investment portfolios."
+            ]
+          },
+          "considerations": [
+            "Lending criteria vary depending on the balance between commercial and residential space. Before proceeding, review the interest rate, fees, early repayment charges and how both elements of income will be assessed.",
+            "If you or your family will live in the residential part, the mortgage may be regulated."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore semi-commercial mortgage options and understand the costs and terms involved.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Loans for Purchasing Assets & Fittings",
+          "overview": [
+            "When purchasing a business or commercial premises, you may also need to fund the fixtures, fittings and trade equipment that come with it, such as catering equipment, shop fittings and signage.",
+            "These costs can sometimes be included within a commercial mortgage, or arranged separately through asset finance or a business loan."
+          ],
+          "howItWorks": [
+            {
+              "title": "Identifying the assets",
+              "text": "We review the fixtures, fittings and equipment included in the purchase and their value."
+            },
+            {
+              "title": "Choosing the structure",
+              "text": "We explain whether the costs can be included in the property finance or are better funded separately."
+            },
+            {
+              "title": "Application and offer",
+              "text": "The lender assesses the application and issues an offer setting out the amount, term, rate and fees."
+            },
+            {
+              "title": "Funding and repayment",
+              "text": "Funds are released at completion or paid to the supplier and repaid over the agreed term."
+            }
+          ],
+          "uses": {
+            "intro": "This type of funding can cover items such as:",
+            "items": [
+              "Catering and kitchen equipment.",
+              "Shop fittings and display units.",
+              "Signage and branding.",
+              "Furniture and fit-out costs.",
+              "Trade equipment included in a business purchase."
+            ]
+          },
+          "considerations": [
+            "Fixtures and fittings usually lose value over time, so lenders may limit how much they will provide. Before proceeding, review the total cost of borrowing and ensure the repayment term does not exceed the useful life of the assets.",
+            "Some arrangements may require a personal guarantee."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore funding options for assets and fittings and understand the costs and terms involved.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Loans for Refurbishment",
+          "overview": [
+            "A refurbishment loan for commercial property provides funds to modernise, reconfigure or repair premises you already own or are purchasing.",
+            "It may be structured as a standalone loan or as an additional tranche alongside an existing commercial mortgage."
+          ],
+          "howItWorks": [
+            {
+              "title": "Reviewing the works",
+              "text": "We discuss the property, the planned works, costs, contractors and timescales."
+            },
+            {
+              "title": "Valuation and assessment",
+              "text": "The lender reviews the schedule of works, contractor credentials and the expected value of the property after works."
+            },
+            {
+              "title": "Funding the works",
+              "text": "Funds may be released upfront or in stages as the works progress, depending on the lender."
+            },
+            {
+              "title": "Repayment",
+              "text": "The loan is repaid over the agreed term or refinanced onto a longer-term mortgage once works are complete."
+            }
+          ],
+          "uses": {
+            "intro": "Refurbishment funding can support works such as:",
+            "items": [
+              "Modernising offices or retail space.",
+              "Reconfiguring internal layouts.",
+              "Major repairs and maintenance.",
+              "Energy efficiency improvements.",
+              "Preparing premises for new tenants."
+            ]
+          },
+          "considerations": [
+            "Refurbishment projects can overrun on cost and time. Before proceeding, review the total cost of borrowing, how and when funds are released, and allow a contingency for unexpected costs.",
+            "Some works may need planning permission, landlord consent or building regulations approval."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore refurbishment funding options and understand the costs and terms involved.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Commercial Re-Mortgage",
+          "overview": [
+            "A commercial re-mortgage involves moving your existing commercial mortgage to a new lender or a new product. It may be used to change your interest rate, release equity or restructure your borrowing.",
+            "It can suit owner-occupiers and investors whose current deal is ending, or whose circumstances or property value have changed."
+          ],
+          "howItWorks": [
+            {
+              "title": "Reviewing your current mortgage",
+              "text": "We review your existing mortgage, the remaining term, any early repayment charges and your objectives."
+            },
+            {
+              "title": "Application and assessment",
+              "text": "The new lender reviews your business accounts or rental income and the property."
+            },
+            {
+              "title": "Valuation and offer",
+              "text": "The lender values the property and issues an offer setting out the new loan amount, rate, term and fees."
+            },
+            {
+              "title": "Completion",
+              "text": "The new loan repays your existing mortgage, and any additional funds released are paid to you."
+            }
+          ],
+          "uses": {
+            "intro": "A commercial re-mortgage can be used to:",
+            "items": [
+              "Move to a different interest rate or product.",
+              "Release equity from an increase in property value.",
+              "Consolidate several property loans.",
+              "Extend or change the remaining term.",
+              "Fund further investment or business needs."
+            ]
+          },
+          "considerations": [
+            "Switching may involve early repayment charges on your existing mortgage, as well as new valuation, legal and arrangement fees. Before proceeding, compare the total cost of switching with the benefit of the new terms.",
+            "Releasing equity increases the amount secured against your property."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore commercial re-mortgage options and understand the costs and terms involved, so you can make an informed decision.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        },
+        {
+          "name": "Commercial Development Finance",
+          "overview": [
+            "Commercial development finance funds the construction or major conversion of commercial schemes, such as offices, retail parks, warehouses, industrial units and mixed-use developments.",
+            "Funding is usually released in stages linked to build milestones and assessed on the scheme’s gross development value and viability."
+          ],
+          "howItWorks": [
+            {
+              "title": "Reviewing the scheme",
+              "text": "We review the site, planning permission, build costs, programme, pre-lets or pre-sales and your track record."
+            },
+            {
+              "title": "Lender assessment",
+              "text": "The lender assesses the scheme’s viability, the professional team and your contribution before issuing terms."
+            },
+            {
+              "title": "Staged drawdown",
+              "text": "Funds are released in stages as works progress, following inspections by the lender’s monitoring surveyor."
+            },
+            {
+              "title": "Exit",
+              "text": "The loan is repaid through sale of the completed scheme, refinancing onto a commercial mortgage or development exit finance."
+            }
+          ],
+          "uses": {
+            "intro": "Commercial development finance can support schemes such as:",
+            "items": [
+              "Office and business park developments.",
+              "Industrial and warehouse units.",
+              "Retail and leisure schemes.",
+              "Mixed-use developments.",
+              "Major commercial conversions."
+            ]
+          },
+          "considerations": [
+            "Commercial schemes carry construction, letting and market risks, and lenders may require pre-lets or pre-sales. Before proceeding, review the total cost of borrowing, including arrangement, monitoring and exit fees, as well as covenants and contingency requirements.",
+            "Lenders typically require personal or corporate guarantees."
+          ],
+          "help": [
+            "At Capital Gateway Ltd, we help you explore commercial development finance options and understand the costs and terms involved, so you can make an informed decision for your scheme.",
+            "Contact our team to discuss your funding requirements."
+          ],
+          "riskWarning": "Your property may be repossessed if you do not keep up repayments on a loan secured against it.",
+          "note": "Funding is subject to eligibility, assessment and provider terms."
+        }
+      ]
+    }
+  ]
+}

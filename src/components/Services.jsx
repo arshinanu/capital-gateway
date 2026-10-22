@@ -1,172 +1,76 @@
 import { useState, useEffect } from 'react'
 import { TrendingUp, Building2, Layers, Landmark, ChevronDown, X, ArrowRight } from 'lucide-react'
+import servicesData from '../data/services.json'
 
-const categories = [
-  {
-    id: 1,
-    icon: TrendingUp,
-    tag: 'Lending',
-    title: 'Business & SME Loans',
-    summary: 'Flexible funding solutions for businesses of every size — from start-ups to established SMEs.',
-    items: [
-      {
-        name: 'Merchant Cash Advance',
-        desc: 'A Merchant Cash Advance gives your business an upfront lump sum in exchange for a percentage of future card sales. Repayments flex with your revenue — when business is slow, you pay less. It\'s one of the fastest forms of unsecured funding, with decisions often made within 24 hours and no fixed monthly repayments to worry about.',
-      },
-      {
-        name: 'Working Capital',
-        desc: 'Working capital finance is designed to cover the everyday costs of running your business — payroll, supplier payments, rent, and operational expenses. It bridges the gap between money going out and money coming in, keeping your business moving without touching your long-term reserves or assets.',
-      },
-      {
-        name: 'Business Loan',
-        desc: 'A straightforward term loan that provides a fixed lump sum repaid over an agreed period, typically 1 to 10 years. Business loans are suitable for a wide range of purposes — from expansion and marketing to equipment purchases or hiring staff. Rates and terms are tailored to your turnover, trading history, and credit profile.',
-      },
-      {
-        name: 'Asset Finance',
-        desc: 'Asset finance allows you to acquire the equipment, vehicles, or machinery your business needs without paying the full cost upfront. Instead, you spread the cost over time through hire purchase, leasing, or finance lease arrangements. This preserves your working capital while giving you immediate access to the assets driving your growth.',
-      },
-      {
-        name: 'Invoice Finance',
-        desc: 'Invoice finance unlocks up to 90% of the value of your outstanding invoices the moment they are raised — rather than waiting 30 to 90 days for customers to pay. It\'s an ideal solution for businesses with strong sales but slow-paying clients, providing a continuous flow of cash tied directly to your sales ledger.',
-      },
-      {
-        name: 'Factoring',
-        desc: 'Factoring goes a step further than standard invoice finance by also handing over the management of your sales ledger and credit control to the lender. They chase payments on your behalf, freeing up significant time and resource. It\'s particularly well suited to businesses that want to outsource their debtor management entirely.',
-      },
-      {
-        name: 'Funding for Stock',
-        desc: 'Stock finance provides a revolving facility to purchase inventory in bulk, ahead of seasonal demand or large contracts. Rather than tying up cash in warehouse goods, you fund the stock purchase through a lender and repay as the stock is sold. It\'s widely used in retail, manufacturing, wholesale, and import businesses.',
-      },
-      {
-        name: 'Overdraft / Revolving Credit',
-        desc: 'A revolving credit facility works like a business overdraft — you have access to a pre-approved credit limit and draw down only what you need, when you need it. Interest is charged only on the balance drawn, not the full limit. It\'s a flexible safety net for managing cash flow gaps, unexpected costs, or short-term opportunities.',
-      },
-      {
-        name: 'Buying / Acquisition of Business',
-        desc: 'Acquisition finance helps you fund the full or partial purchase of an existing business, whether that\'s a trade sale, management buy-out, or share acquisition. Lenders assess the target business\'s cash flow, assets, and profitability alongside your own profile. We structure the finance to match the deal — including deferred consideration and vendor loans where needed.',
-      },
-      {
-        name: 'Retail Furniture Finance',
-        desc: 'Retail furniture finance enables your customers to spread the cost of high-value purchases at the point of sale. Rather than losing a sale due to upfront cost, you offer an affordable monthly payment plan — funded by a lender and settled with you immediately. It increases conversion rates and average order values for furniture and homeware retailers.',
-      },
-      {
-        name: 'Loans Against Assets',
-        desc: 'If your business owns unencumbered assets — such as plant and machinery, commercial vehicles, or property — you can use them as security to release capital quickly. Asset-backed loans typically offer higher borrowing amounts and lower rates than unsecured lending, making them ideal for businesses that are asset-rich but need liquidity.',
-      },
-    ],
-  },
-  {
-    id: 2,
-    icon: Building2,
-    tag: 'Bridging',
-    title: 'Bridging – Commercial and Residential',
-    summary: 'Short-term bridging finance for time-critical commercial and residential transactions and property purchases.',
-    items: [
-      {
-        name: 'Quick Bridge (24/48 hr)',
-        desc: 'When a transaction cannot wait, a quick bridge delivers funds in as little as 24 to 48 hours. These are emergency facilities for situations where a deal would otherwise collapse — such as a chain break, an urgent purchase opportunity, or an imminent legal deadline. Speed comes at a premium, but for the right deal it can be transformative.',
-      },
-      {
-        name: 'Standard Auction Bridge Loan',
-        desc: 'Buying at auction requires completion within 28 days of the hammer falling — far too fast for a standard mortgage. An auction bridge loan is pre-arranged so that funds are available the moment the gavel drops. Once you own the property, you can refinance onto a longer-term product at your own pace.',
-      },
-      {
-        name: 'Residential Bridge Loan',
-        desc: 'A residential bridge loan provides short-term secured finance against a residential property, typically for 1 to 24 months. It\'s commonly used by homeowners who want to buy before their current property sells, or by investors who need to move quickly on a purchase. The loan is repaid once the exit — sale or refinance — is completed.',
-      },
-      {
-        name: 'Commercial Bridge Loan',
-        desc: 'A commercial bridge loan is secured against commercial or mixed-use property and used to fund time-sensitive business property transactions. Whether you\'re acquiring new premises, refinancing to release equity, or repositioning an asset, a commercial bridge gives you fast access to capital while a longer-term solution is arranged.',
-      },
-      {
-        name: 'Regulated Bridge Loan',
-        desc: 'A regulated bridge loan is governed by the FCA and applies when the security property is or will be occupied by the borrower or a close family member. These loans carry full consumer protections, including affordability assessments and clear cooling-off rights. They\'re the appropriate product when bridging is secured against your own home.',
-      },
-      {
-        name: 'Unregulated Bridge Loan',
-        desc: 'Unregulated bridging loans apply to investment and buy-to-let properties where the borrower will not be living in the security. Without FCA oversight, these products can be structured more flexibly and processed more quickly, making them popular with property investors, developers, and landlords acting through limited companies.',
-      },
-      {
-        name: 'Refurbishment Loan',
-        desc: 'A refurbishment loan funds improvement works on a property before it is sold or refinanced onto a long-term mortgage. Light refurbishment covers cosmetic works such as kitchens, bathrooms, and decoration. Heavy refurbishment covers structural changes, extensions, and conversions. The loan is sized against the projected end value of the completed property.',
-      },
-      {
-        name: 'Bridge to Let',
-        desc: 'A bridge-to-let product combines a short-term bridging loan with a guaranteed exit onto a buy-to-let mortgage from the same lender. This gives investors certainty of their full exit strategy from day one. It\'s ideal for purchasing properties that need work before they can be tenanted and mortgaged at their improved value.',
-      },
-      {
-        name: 'Development Exit Finance',
-        desc: 'Development exit finance replaces expensive development debt once a scheme is practically complete and the units are ready to sell or let. It immediately reduces your monthly interest cost, gives you more time to achieve the best sale prices, and frees up your development facility for the next project. It\'s one of the smartest tools in a developer\'s toolkit.',
-      },
-      {
-        name: 'Re-Bridge / Safe Exit',
-        desc: 'A re-bridge is used when an existing bridging loan is approaching its term and the original exit — such as a sale or refinance — has been delayed. Rather than defaulting, a re-bridge replaces the loan with a fresh facility, giving you the time needed to exit cleanly. It protects your credit record and your asset while you conclude your strategy.',
-      },
-    ],
-  },
-  {
-    id: 3,
-    icon: Layers,
-    tag: 'Development',
-    title: 'Development Finance – Commercial and Residential',
-    summary: 'Structured finance for ground-up commercial and residential builds, conversions, and large-scale refurbishment projects.',
-    items: [
-      {
-        name: 'Purchase Land With or Without Planning',
-        desc: 'Land finance can be structured at any stage of the planning journey — whether you have full detailed consent, outline planning permission, or are buying without any planning at all. Lenders assess the site\'s potential, location, and your track record to determine how much they will lend. This type of finance is often the first step in a full development funding package.',
-      },
-      {
-        name: 'Development Exit Finance',
-        desc: 'Once your development is complete and units are ready to sell or hand over, development exit finance replaces your expensive construction facility with a cheaper short-term loan. This reduces your holding costs significantly, improves your returns, and gives you the breathing room to sell at the right price rather than being forced by a lender deadline.',
-      },
-      {
-        name: 'First Time Developer Finance',
-        desc: 'Breaking into property development is one of the biggest challenges new developers face — most lenders want a track record before they lend. We specialise in placing first-time developer finance with lenders who focus on the strength of the scheme, the site, and your professional team rather than solely on past experience. We\'ll guide you through every stage of the process.',
-      },
-      {
-        name: 'Experienced Developer Finance',
-        desc: 'Developers with a proven track record of successfully completing schemes can access higher loan-to-cost ratios, more competitive rates, and faster decisions. Lenders compete for the best developers, and we leverage your track record to negotiate the most favourable terms across our panel. Multiple sites and portfolio-level facilities can also be arranged.',
-      },
-      {
-        name: 'Refurbishment / Value-Addition Finance',
-        desc: 'Refurbishment finance funds works that materially increase a property\'s value or rental income — from reconfiguring internal layouts and adding extensions to full conversions and change-of-use projects. The loan is sized against the gross development value once works are complete, and funds are typically drawn in stages as works progress on site.',
-      },
-    ],
-  },
-  {
-    id: 4,
-    icon: Landmark,
-    tag: 'Mortgage',
-    title: 'Mortgage – Commercial and Residential',
-    summary: 'Long-term mortgage solutions for commercial, residential, semi-commercial, and investment properties.',
-    items: [
-      {
-        name: 'Purchase of Commercial Property',
-        desc: 'A commercial mortgage funds the purchase of business premises or investment property — including offices, retail units, warehouses, industrial estates, and leisure facilities. Owner-occupier mortgages are assessed on your business\'s trading performance, while investment mortgages are assessed primarily on rental income. Terms typically range from 5 to 25 years.',
-      },
-      {
-        name: 'Purchase of Semi-Commercial Property',
-        desc: 'Semi-commercial properties combine residential and commercial use under one roof — for example, a shop with a flat above. These require specialist lenders who understand the blended nature of the income. We have access to lenders who offer competitive rates on mixed-use properties that mainstream banks often decline to fund.',
-      },
-      {
-        name: 'Loans for Purchasing Assets & Fittings',
-        desc: 'When purchasing a business or commercial property, you may also need to fund the fixtures, fittings, and trade assets that come with it — from catering equipment to shopfitting and signage. These can often be included within the overall commercial mortgage facility or arranged separately through asset finance, depending on the lender and deal structure.',
-      },
-      {
-        name: 'Loans for Refurbishment',
-        desc: 'If you own commercial property that needs modernisation, reconfiguration, or significant repair, a refurbishment loan provides the capital to carry out the works. The loan may be structured as a standalone facility or as an additional tranche on top of an existing commercial mortgage. Lenders assess the works schedule, contractor credentials, and post-works value.',
-      },
-      {
-        name: 'Commercial Re-Mortgage',
-        desc: 'A commercial re-mortgage allows you to switch your existing commercial mortgage to a new lender — typically to access a lower interest rate, release equity from increased property value, or restructure your debt on more favourable terms. It can also be used to consolidate multiple property loans or to extend the remaining term of your facility.',
-      },
-      {
-        name: 'Commercial Development Finance',
-        desc: 'Commercial development finance funds the ground-up construction or major conversion of commercial schemes — such as office buildings, retail parks, warehouses, or mixed-use developments. The facility is drawn in staged tranches tied to build milestones, keeping your interest costs low during construction. Loans are assessed on the gross development value and strength of the scheme.',
-      },
-    ],
-  },
-]
+// Icon names used in services.json → lucide components
+const ICONS = { TrendingUp, Building2, Layers, Landmark }
+
+const categories = servicesData.categories
+
+// Text fields may be a single string or an array of paragraphs
+const toParagraphs = (text) => (Array.isArray(text) ? text : text ? [text] : [])
+
+function Section({ title, children }) {
+  return (
+    <section className="modal-section">
+      <h4 className="modal-section-title">{title}</h4>
+      {children}
+    </section>
+  )
+}
+
+const Paras = ({ text }) =>
+  toParagraphs(text).map((p, i) => <p key={i} className="modal-desc">{p}</p>)
+
+// Renders a sub-service's detail. See src/data/services.json for the fields.
+function ServiceDetail({ item }) {
+  const { overview, desc, howItWorks, uses, considerations, help, riskWarning, note } = item
+  return (
+    <>
+      {(overview || desc) && (
+        <Section title="Overview"><Paras text={overview || desc} /></Section>
+      )}
+
+      {howItWorks?.length > 0 && (
+        <Section title="How It Works">
+          <ol className="modal-steps">
+            {howItWorks.map((step, i) => (
+              <li key={i} className="modal-step">
+                <span className="modal-step-num">{i + 1}</span>
+                <div>
+                  <h5 className="modal-step-title">{step.title}</h5>
+                  <p className="modal-desc">{step.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </Section>
+      )}
+
+      {uses && (
+        <Section title={uses.title || 'What Can the Funding Be Used For?'}>
+          <Paras text={uses.intro} />
+          {uses.items?.length > 0 && (
+            <ul className="modal-highlights">
+              {uses.items.map((u, i) => <li key={i}>{u}</li>)}
+            </ul>
+          )}
+        </Section>
+      )}
+
+      {considerations && (
+        <Section title="Key Considerations"><Paras text={considerations} /></Section>
+      )}
+
+      {help && (
+        <Section title="How Capital Gateway Ltd Can Help"><Paras text={help} /></Section>
+      )}
+
+      {riskWarning && <p className="modal-risk">{riskWarning}</p>}
+      {note && <p className="modal-note">{note}</p>}
+    </>
+  )
+}
 
 export default function Services() {
   const [open, setOpen] = useState(null)
@@ -219,7 +123,7 @@ export default function Services() {
 
         <div className="accordion">
           {categories.map((cat) => {
-            const Icon = cat.icon
+            const Icon = ICONS[cat.icon] || Layers
             const isOpen = open === cat.id
             return (
               <div key={cat.id} className={`acc-item${isOpen ? ' acc-open' : ''}`}>
@@ -290,7 +194,9 @@ export default function Services() {
             </button>
             <span className="modal-cat">{selected.catTitle}</span>
             <h3 className="modal-title" id="modal-title">{selected.name}</h3>
-            <p className="modal-desc">{selected.desc}</p>
+            <div className="modal-body">
+              <ServiceDetail item={selected} />
+            </div>
             <a href="#contact" className="btn btn-primary modal-cta" onClick={() => setSelected(null)}>
               Discuss this option
               <ArrowRight size={14} strokeWidth={2} />
@@ -612,8 +518,12 @@ export default function Services() {
           border: 1px solid var(--line);
           border-radius: 20px;
           padding: 48px 48px 40px;
-          max-width: 560px;
+          max-width: 720px;
           width: 100%;
+          max-height: 90vh;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
           position: relative;
           overflow: hidden;
           animation: zoomIn 0.25s cubic-bezier(0.34, 1.4, 0.64, 1);
@@ -672,12 +582,92 @@ export default function Services() {
           color: var(--ink);
           margin-bottom: 20px;
         }
+        .modal-body {
+          flex: 1;
+          min-height: 0;
+          width: 100%;
+          overflow-y: auto;
+          margin-bottom: 28px;
+          padding-right: 8px;
+        }
+        .modal-section { margin-bottom: 28px; }
+        .modal-section:last-of-type { margin-bottom: 20px; }
+        .modal-section-title {
+          font-family: var(--font-display);
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: -0.01em;
+          color: var(--ink);
+          margin-bottom: 12px;
+        }
+        .modal-steps {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+        .modal-step {
+          display: flex;
+          gap: 14px;
+          align-items: flex-start;
+        }
+        .modal-step-num {
+          flex-shrink: 0;
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          background: rgba(0,232,122,0.12);
+          color: var(--accent);
+          font-family: var(--font-mono);
+          font-size: 12px;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 2px;
+        }
+        .modal-step-title {
+          font-size: 15px;
+          font-weight: 600;
+          color: var(--ink);
+          margin-bottom: 4px;
+        }
+        .modal-risk {
+          font-size: 14px;
+          font-weight: 600;
+          color: var(--ink);
+          line-height: 1.6;
+          padding: 12px 16px;
+          border: 1px solid var(--line);
+          border-left: 3px solid var(--accent);
+          border-radius: 8px;
+          background: var(--ivory);
+          margin-bottom: 12px;
+        }
+        .modal-note {
+          font-size: 13px;
+          color: var(--muted);
+          line-height: 1.6;
+          font-style: italic;
+        }
         .modal-desc {
           font-size: 15px;
           color: var(--muted);
           line-height: 1.75;
-          margin-bottom: 32px;
+          margin-bottom: 16px;
         }
+        .modal-desc:last-child { margin-bottom: 0; }
+        .modal-highlights {
+          margin: 8px 0 0;
+          padding-left: 20px;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.7;
+        }
+        .modal-highlights li { margin-bottom: 6px; }
+        .modal-highlights li::marker { color: var(--accent); }
         .modal-cta {
           display: inline-flex;
           align-items: center;
