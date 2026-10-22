@@ -45,7 +45,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            <span className="eyebrow fca-badge">FCA Authorised · UK Finance Broker</span>
+            <span className="eyebrow fca-badge">UK Finance Broker</span>
             <span className="status-pill">
               <span className="dot" />
               Accepting new clients
@@ -105,7 +105,7 @@ export default function Hero() {
               { k: '400+', v: 'Lender network' },
               { k: '48hrs', v: 'Avg. decision' },
               { k: '100%', v: 'Transparent fees' },
-              { k: 'FCA', v: 'Authorised' },
+              { k: 'NACFB', v: 'Member' },
             ].map((s, i) => (
               <div key={i} className="stat">
                 <div className="stat-k">{s.k}</div>

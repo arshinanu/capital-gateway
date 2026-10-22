@@ -60,7 +60,7 @@ export default function Footer({ onPrivacyClick }) {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
-            <span>Regulated by the Financial Conduct Authority</span>
+            <span>Appointed Representative of Swoop Finance Limited</span>
           </div>
           <div className="footer-cred-divider" />
           <div className="footer-cred-item">
@@ -100,6 +100,14 @@ export default function Footer({ onPrivacyClick }) {
           </div>
         </div>
 
+        <div className="footer-disclaimer">
+          <p>
+            Swoop Finance Limited is a credit broker and not a lender. Capital Gateway
+            Limited (FRN 1044594) is an Appointed Representative of Swoop Finance Limited
+            (FRN 936513).
+          </p>
+        </div>
+
         <div className="footer-bottom">
           <div className="footer-legal">
             <span>© 2026 Capital Gateway Limited.</span>
@@ -108,7 +116,7 @@ export default function Footer({ onPrivacyClick }) {
             <a href="#">Complaints</a>
           </div>
           <div className="footer-reg">
-            <span> FRN: 936513 · ICO: ZA600162</span>
+            <span>FRN: 1044594 · ICO: ZA600162</span>
           </div>
         </div>
       </div>
@@ -279,6 +287,18 @@ export default function Footer({ onPrivacyClick }) {
           .footer-partner-divider {
             display: none;
           }
+        }
+
+        .footer-disclaimer {
+          padding: 0 0 32px;
+        }
+        .footer-disclaimer p {
+          font-size: 14px;
+          line-height: 1.6;
+          color: #ffffff;
+          max-width: 760px;
+          margin: 0 auto;
+          text-align: center;
         }
 
         .footer-bottom {

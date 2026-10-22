@@ -356,7 +356,7 @@ export default function Registration() {
               'No credit footprint on initial enquiry',
               'Access to 400+ specialist lenders',
               'Decision in principle within 48 hours',
-              'Fully FCA authorised broker',
+              'Appointed Representative of Swoop Finance Limited',
             ].map((f, i) => (
               <div key={i} className="reg-feature">
                 <div className="reg-check"><Check size={12} strokeWidth={2.5} /></div>

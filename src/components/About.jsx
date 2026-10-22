@@ -134,8 +134,9 @@ export default function About() {
               clarity and professionalism.
             </p>
             <p>
-              Capital Gateway Ltd is listed on the Financial Conduct Authority Register
-              under FRN 1044594. We are a credit broker, not a lender. We are also
+              Capital Gateway Limited (FRN 1044594) is an Appointed Representative of
+              Swoop Finance Limited (FRN 936513). Swoop Finance Limited is a credit broker
+              and not a lender. We are also
               registered with the Information Commissioner's Office, ICO Registration
               Number ZB99626, reflecting our commitment to data protection and GDPR
               compliance.
