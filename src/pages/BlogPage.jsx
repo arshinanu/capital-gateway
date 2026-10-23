@@ -11,7 +11,8 @@ export default function BlogPage() {
   // React doesn't execute <script> tags rendered in JSX, so inject the Soro embed manually
   useEffect(() => {
     const script = document.createElement('script')
-    script.src = SORO_EMBED_SRC
+    // Soro's CDN caches the embed per-referer for an hour; a 5-minute cache-buster lets new posts show quickly
+    script.src = `${SORO_EMBED_SRC}?v=${Math.floor(Date.now() / 300000)}`
     script.defer = true
     document.body.appendChild(script)
     return () => {
