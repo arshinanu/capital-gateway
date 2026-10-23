@@ -16,6 +16,7 @@ import WhatsAppButton from './components/WhatsAppButton.jsx'
 import ApplyPage from './pages/ApplyPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
 import DocumentUploadPage from './pages/DocumentUploadPage.jsx'
+import BlogPage from './pages/BlogPage.jsx'
 function HomePage() {
   const [showPrivacy, setShowPrivacy] = useState(false)
   const [showTop, setShowTop] = useState(false)
@@ -113,6 +114,7 @@ export default function App() {
       <Route path="/apply" element={<ApplyPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/upload" element={<DocumentUploadPage />} />
+      <Route path="/blog" element={<BlogPage />} />
     </Routes>
   )
 }

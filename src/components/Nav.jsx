@@ -18,6 +18,7 @@ export default function Nav() {
     { href: '/#calculator', label: 'Calculator' },
     { href: '/#testimonials', label: 'Clients' },
     { href: '/#news', label: 'News' },
+    { href: '/blog', label: 'Blog' },
     { href: '/#contact', label: 'Contact' },
   ]
 
