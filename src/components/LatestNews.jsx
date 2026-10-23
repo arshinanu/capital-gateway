@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function LatestNews() {
   const [articles, setArticles] = useState([])
@@ -58,6 +59,24 @@ export default function LatestNews() {
             </a>
           ))}
         </div>
+
+        <Link to="/blog" className="blog-cta">
+          <div className="blog-cta-text">
+            <span className="blog-cta-label">
+              <span className="blog-cta-pulse"></span>
+              Fresh on the blog
+            </span>
+            <h3 className="blog-cta-title">
+              Expert guides to smarter <span className="italic-accent">business finance</span>
+            </h3>
+          </div>
+          <span className="btn btn-primary blog-cta-btn">
+            Read the blog
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+        </Link>
       </div>
 
       <style>{`
@@ -159,6 +178,58 @@ export default function LatestNews() {
           text-underline-offset: 4px;
         }
 
+        .blog-cta {
+          margin-top: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 32px;
+          padding: 40px 48px;
+          border: 1px solid rgba(0, 232, 122, 0.35);
+          border-radius: 16px;
+          background:
+            radial-gradient(circle at 0% 0%, rgba(0, 232, 122, 0.16), transparent 55%),
+            var(--paper);
+          transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+        }
+        .blog-cta:hover {
+          border-color: var(--accent);
+          transform: translateY(-2px);
+          box-shadow: 0 20px 50px -20px rgba(0, 232, 122, 0.35);
+        }
+        .blog-cta-label {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          font-family: var(--font-mono);
+          font-size: 11px;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+          color: var(--accent);
+        }
+        .blog-cta-pulse {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: var(--accent);
+          animation: blogPulse 1.8s ease-out infinite;
+        }
+        @keyframes blogPulse {
+          0% { box-shadow: 0 0 0 0 rgba(0, 232, 122, 0.6); }
+          100% { box-shadow: 0 0 0 10px rgba(0, 232, 122, 0); }
+        }
+        .blog-cta-title {
+          font-family: var(--font-display);
+          font-size: clamp(24px, 3vw, 34px);
+          font-weight: 600;
+          letter-spacing: -0.02em;
+          line-height: 1.15;
+          color: var(--ink);
+          margin-top: 12px;
+        }
+        .blog-cta-btn svg { transition: transform 0.3s var(--ease); }
+        .blog-cta:hover .blog-cta-btn svg { transform: translateX(4px); }
+
         @media (max-width: 1024px) {
           .news-grid {
             grid-template-columns: repeat(2, 1fr);
@@ -171,6 +242,11 @@ export default function LatestNews() {
           }
           .news-grid {
             grid-template-columns: 1fr;
+          }
+          .blog-cta {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 28px 24px;
           }
         }
       `}</style>

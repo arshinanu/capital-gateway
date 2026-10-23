@@ -18,7 +18,7 @@ export default function Nav() {
     { href: '/#calculator', label: 'Calculator' },
     { href: '/#testimonials', label: 'Clients' },
     { href: '/#news', label: 'News' },
-    { href: '/blog', label: 'Blog' },
+    { href: '/blog', label: 'Blog', badge: 'New' },
     { href: '/#contact', label: 'Contact' },
   ]
 
@@ -40,7 +40,10 @@ export default function Nav() {
 
           <div className="nav-links">
             {links.map(l => (
-              <a key={l.href} href={l.href} className="nav-link">{l.label}</a>
+              <a key={l.href} href={l.href} className="nav-link">
+                {l.label}
+                {l.badge && <span className="nav-badge">{l.badge}</span>}
+              </a>
             ))}
             <Link to="/apply" className="nav-link nav-link-apply">Apply</Link>
             <Link to="/login" className="nav-link nav-link-login">Login</Link>
@@ -63,7 +66,10 @@ export default function Nav() {
       {open && (
         <div className="mobile-menu" style={{ top: scrolled ? '68px' : '84px' }}>
           {links.map(l => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+              {l.label}
+              {l.badge && <span className="nav-badge">{l.badge}</span>}
+            </a>
           ))}
           <Link to="/apply" onClick={() => setOpen(false)}>Apply</Link>
           <Link to="/login" onClick={() => setOpen(false)}>Login</Link>
@@ -129,6 +135,25 @@ export default function Nav() {
           transition: width 0.3s var(--ease);
         }
         .nav-link:hover::after { width: 100%; }
+        .nav-badge {
+          display: inline-block;
+          margin-left: 6px;
+          padding: 2px 6px;
+          font-family: var(--font-mono);
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          vertical-align: 2px;
+          color: var(--paper-solid);
+          background: var(--accent);
+          border-radius: 999px;
+          animation: navBadgeGlow 2s ease-in-out infinite;
+        }
+        @keyframes navBadgeGlow {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(0, 232, 122, 0); }
+          50% { box-shadow: 0 0 12px 2px rgba(0, 232, 122, 0.55); }
+        }
         .nav-link-apply {
           color: var(--accent);
           font-weight: 600;
